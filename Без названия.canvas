@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"81e2b348c2f7f5ab","x":787,"y":-206,"width":400,"height":400,"type":"file","file":"emails/InvoiceEmail.tsx"},
+		{"id":"ab093685bd9bb4e5","x":1232,"y":-206,"width":400,"height":400,"type":"file","file":"emails/admin/MessageToAllUser.tsx"},
+		{"id":"e3569d0003968370","x":1677,"y":-206,"width":400,"height":400,"type":"file","file":"emails/NewTaskComment.tsx"},
+		{"id":"8627e8e75a654db3","x":2122,"y":-206,"width":400,"height":400,"type":"file","file":"emails/NewTaskFromCRM.tsx"},
+		{"id":"bd4ae6312b33b0d1","x":2567,"y":-206,"width":400,"height":400,"type":"file","file":"emails/NewTaskFromCRMToWatchers.tsx"},
+		{"id":"aa83308db4f5d80f","x":3012,"y":-206,"width":400,"height":400,"type":"file","file":"emails/NewTaskFromProject.tsx"},
+		{"id":"1d6b8cede2a31a99","x":3457,"y":-206,"width":400,"height":400,"type":"file","file":"emails/ScheduledReport.tsx"},
+		{"id":"fc29068e9d053521","x":3902,"y":-206,"width":400,"height":400,"type":"file","file":"emails/UpdatedTaskFromProject.tsx"},
+		{"id":"9a927c7f916f3a91","x":342,"y":-206,"width":400,"height":400,"type":"file","file":"emails/InviteUser.tsx"}
+	],
+	"edges":[]
+}
