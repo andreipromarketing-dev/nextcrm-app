@@ -48,7 +48,7 @@ const CreateTargetListModal = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button size="sm">+ New List</Button>
+        <Button size="sm">+ Новый список</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
@@ -69,7 +69,7 @@ const CreateTargetListModal = () => {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="description">Description</Label>
+            <Label htmlFor="description">Описание</Label>
             <Textarea
               id="description"
               placeholder="A list of targets for Q1 outreach campaign"

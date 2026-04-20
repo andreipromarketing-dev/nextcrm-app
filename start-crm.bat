@@ -29,11 +29,19 @@ timeout /t 2 /nobreak >nul
 echo.
 echo [2/2] Запуск NextCRM...
 cd /d D:\MY-LIFE-SYSTEM\nextcrm-app-main
+if errorlevel 1 (
+    echo ОШИБКА: Не удалось перейти в папку проекта
+    pause
+    exit /b 1
+)
 echo.
 echo    NextCRM запускается...
-echo    Открой http://localhost:3000
+echo    Открой http://localhost:3000 в браузере
 echo ========================================
 echo.
+echo Запуск pnpm dev...
 
-REM Запуск в текущем окне (без нового окна)
-pnpm dev
+REM Запуск pnpm dev и открытие в Chrome инкогнито
+start "" cmd /k "cd /d D:\MY-LIFE-SYSTEM\nextcrm-app-main && pnpm dev"
+timeout /t 8 /nobreak >nul
+start chrome --incognito http://localhost:3000

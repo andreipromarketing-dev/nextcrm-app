@@ -9,8 +9,8 @@ const TargetsPage = async () => {
   const targets = await getTargets();
   return (
     <Container
-      title="Targets"
-      description="Manage your marketing and sales targets"
+      title="Базы контактов"
+      description="Управление целями маркетинга и продаж"
     >
       <Suspense fallback={<CrmTableSkeleton />}>
         <TargetsView data={targets} />

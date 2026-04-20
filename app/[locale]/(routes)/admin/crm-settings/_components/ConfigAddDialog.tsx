@@ -46,7 +46,7 @@ export function ConfigAddDialog({ configType, label }: Props) {
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 pt-2">
           <div className="space-y-1">
-            <Label htmlFor="name">Name</Label>
+            <Label htmlFor="name">Название</Label>
             <Input id="name" value={name} onChange={(e) => setName(e.target.value)} maxLength={100} required />
           </div>
           <Button type="submit" disabled={loading} className="w-full">

@@ -125,7 +125,7 @@ export default function TemplateEditorForm({ initialData, templateId }: Props) {
           />
         </div>
         <div className="flex flex-col gap-2">
-          <Label htmlFor="description">Description</Label>
+          <Label htmlFor="description">Описание</Label>
           <Textarea
             id="description"
             value={description}

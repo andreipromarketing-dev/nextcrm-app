@@ -32,7 +32,7 @@ interface Props {
 const STATUS_BADGE: Record<string, { label: string; variant: "default" | "secondary" | "destructive" | "outline" }> = {
   COMPLETED: { label: "Enriched", variant: "default" },
   RUNNING:   { label: "Running", variant: "secondary" },
-  PENDING:   { label: "Pending", variant: "outline" },
+  PENDING:   { label: "Ожидает", variant: "outline" },
   FAILED:    { label: "Failed", variant: "destructive" },
   SKIPPED:   { label: "Skipped", variant: "outline" },
 };
@@ -94,7 +94,7 @@ export function TargetContactsTable({ targetId, contacts: initialContacts }: Pro
             </DialogHeader>
             <form onSubmit={handleAddContact} className="space-y-4">
               <div className="space-y-1">
-                <Label htmlFor="name">Name</Label>
+                <Label htmlFor="name">Название</Label>
                 <Input
                   id="name"
                   value={form.name}
@@ -146,12 +146,12 @@ export function TargetContactsTable({ targetId, contacts: initialContacts }: Pro
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Name</TableHead>
+              <TableHead>Название</TableHead>
               <TableHead>Title</TableHead>
               <TableHead>Email</TableHead>
               <TableHead>Phone</TableHead>
               <TableHead>LinkedIn</TableHead>
-              <TableHead>Status</TableHead>
+              <TableHead>Статус</TableHead>
               <TableHead></TableHead>
             </TableRow>
           </TableHeader>
@@ -171,9 +171,7 @@ export function TargetContactsTable({ targetId, contacts: initialContacts }: Pro
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm text-blue-600 hover:underline"
-                      >
-                        View
-                      </a>
+                      >Просмотр</a>
                     ) : "—"}
                   </TableCell>
                   <TableCell>

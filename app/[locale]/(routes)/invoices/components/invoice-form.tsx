@@ -233,7 +233,7 @@ export function InvoiceForm({
       <div className="space-y-6">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           <div className="space-y-2">
-            <Label>{l.type ?? "Type"}</Label>
+            <Label>{l.type ?? "Тип"}</Label>
             <Select value={type} onValueChange={setType}>
               <SelectTrigger>
                 <SelectValue />
@@ -249,7 +249,7 @@ export function InvoiceForm({
           </div>
 
           <div className="space-y-2">
-            <Label>{l.account ?? "Account"}</Label>
+            <Label>{l.account ?? "Компания"}</Label>
             <AccountSearchCombobox
               value={accountId}
               onChange={setAccountId}

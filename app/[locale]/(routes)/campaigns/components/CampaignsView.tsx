@@ -131,9 +131,7 @@ function CampaignRowActions({ row }: { row: { original: Campaign } }) {
         <DropdownMenuContent align="end" className="w-[160px]">
           <DropdownMenuItem
             onClick={() => router.push(`/campaigns/${campaign.id}`)}
-          >
-            View
-          </DropdownMenuItem>
+          >Просмотр</DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem onClick={() => setOpen(true)}>
             Delete
@@ -148,7 +146,7 @@ function CampaignRowActions({ row }: { row: { original: Campaign } }) {
 const columns: ColumnDef<Campaign>[] = [
   {
     accessorKey: "name",
-    header: "Name",
+    header: "Название",
     cell: ({ row }) => (
       <Link
         href={`/campaigns/${row.original.id}`}
@@ -162,7 +160,7 @@ const columns: ColumnDef<Campaign>[] = [
   },
   {
     accessorKey: "status",
-    header: "Status",
+    header: "Статус",
     cell: ({ row }) => {
       const status = row.getValue("status") as string | null;
       return status ? (
@@ -178,7 +176,7 @@ const columns: ColumnDef<Campaign>[] = [
   },
   {
     accessorKey: "scheduled_at",
-    header: "Scheduled At",
+    header: "Запланировано на",
     cell: ({ row }) => (
       <div className="w-[100px]">
         {row.getValue("scheduled_at")
@@ -191,7 +189,7 @@ const columns: ColumnDef<Campaign>[] = [
   },
   {
     id: "recipients",
-    header: "Recipients",
+    header: "Получатели",
     cell: ({ row }) => (
       <div className="text-right tabular-nums">
         {row.original._count?.sends ?? 0}
@@ -202,7 +200,7 @@ const columns: ColumnDef<Campaign>[] = [
   },
   {
     id: "template_name",
-    header: "Template",
+    header: "Шаблон",
     cell: ({ row }) => (
       <div>{row.original.template?.name ?? "—"}</div>
     ),
@@ -260,7 +258,7 @@ const CampaignsView = ({ data }: { data: Campaign[] }) => {
       <CardHeader className="pb-3">
         <div className="flex justify-between">
           <div>
-            <CardTitle>All Campaigns</CardTitle>
+            <CardTitle>Все кампании</CardTitle>
             <CardDescription></CardDescription>
           </div>
         </div>
@@ -273,7 +271,7 @@ const CampaignsView = ({ data }: { data: Campaign[] }) => {
           <div className="flex items-center justify-between">
             <div className="flex flex-1 items-center space-x-2">
               <Input
-                placeholder="Filter by name ..."
+                placeholder="Фильтр по названию ..."
                 value={
                   (table.getColumn("name")?.getFilterValue() as string) ?? ""
                 }
@@ -287,12 +285,12 @@ const CampaignsView = ({ data }: { data: Campaign[] }) => {
                 onValueChange={(value) => setSelectedStatus(value)}
               >
                 <SelectTrigger className="h-8 w-[130px]">
-                  <SelectValue placeholder="Status" />
+                  <SelectValue placeholder="Статус" />
                 </SelectTrigger>
                 <SelectContent>
                   {STATUS_OPTIONS.map((s) => (
                     <SelectItem key={s} value={s}>
-                      {s === "All" ? "All Statuses" : s.charAt(0).toUpperCase() + s.slice(1)}
+                      {s === "All" ? "Все статусы" : s.charAt(0).toUpperCase() + s.slice(1)}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -354,9 +352,7 @@ const CampaignsView = ({ data }: { data: Campaign[] }) => {
                     <TableCell
                       colSpan={columns.length}
                       className="h-24 text-center"
-                    >
-                      No campaigns found.
-                    </TableCell>
+                    >Кампании не найдены.</TableCell>
                   </TableRow>
                 )}
               </TableBody>
@@ -371,7 +367,7 @@ const CampaignsView = ({ data }: { data: Campaign[] }) => {
             </div>
             <div className="flex items-center space-x-6 lg:space-x-8">
               <div className="flex items-center space-x-2">
-                <p className="text-sm font-medium">Rows per page</p>
+                <p className="text-sm font-medium">Строк на странице</p>
                 <Select
                   value={`${table.getState().pagination.pageSize}`}
                   onValueChange={(value) => {
@@ -403,7 +399,7 @@ const CampaignsView = ({ data }: { data: Campaign[] }) => {
                   onClick={() => table.setPageIndex(0)}
                   disabled={!table.getCanPreviousPage()}
                 >
-                  <span className="sr-only">Go to first page</span>
+                  <span className="sr-only">На первую страницу</span>
                   <DoubleArrowLeftIcon className="h-4 w-4" />
                 </Button>
                 <Button
@@ -412,7 +408,7 @@ const CampaignsView = ({ data }: { data: Campaign[] }) => {
                   onClick={() => table.previousPage()}
                   disabled={!table.getCanPreviousPage()}
                 >
-                  <span className="sr-only">Go to previous page</span>
+                  <span className="sr-only">На предыдущую страницу</span>
                   <ChevronLeftIcon className="h-4 w-4" />
                 </Button>
                 <Button
@@ -421,7 +417,7 @@ const CampaignsView = ({ data }: { data: Campaign[] }) => {
                   onClick={() => table.nextPage()}
                   disabled={!table.getCanNextPage()}
                 >
-                  <span className="sr-only">Go to next page</span>
+                  <span className="sr-only">На следующую страницу</span>
                   <ChevronRightIcon className="h-4 w-4" />
                 </Button>
                 <Button
@@ -432,7 +428,7 @@ const CampaignsView = ({ data }: { data: Campaign[] }) => {
                   }
                   disabled={!table.getCanNextPage()}
                 >
-                  <span className="sr-only">Go to last page</span>
+                  <span className="sr-only">На последнюю страницу</span>
                   <DoubleArrowRightIcon className="h-4 w-4" />
                 </Button>
               </div>

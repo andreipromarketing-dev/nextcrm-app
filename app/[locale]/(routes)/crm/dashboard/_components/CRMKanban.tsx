@@ -112,9 +112,7 @@ function OpportunityCard({ opportunity, router, onThumbsDown, stage, salesStages
                   onClick={() =>
                     router.push(`/crm/opportunities/${opportunity.id}`)
                   }
-                >
-                  View
-                </DropdownMenuItem>
+                >Просмотр</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
@@ -133,11 +131,11 @@ function OpportunityCard({ opportunity, router, onThumbsDown, stage, salesStages
             </HoverCard>
           </div>
           <div className="space-x-1">
-            <span>Amount:</span>
+            <span>Сумма:</span>
             <span>{opportunity.budget?.toString()}</span>
           </div>
           <div className="space-x-1">
-            <span>Expected closing:</span>
+            <span>Ожидаемое закрытие:</span>
             <span
               className={
                 opportunity.close_date &&
@@ -342,7 +340,7 @@ const CRMKanban = ({
       }
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong");
+      toast.error("Что-то пошло не так");
       columnsRef.current = initColumns(data, salesStages);
       setColumns(initColumns(data, salesStages));
     }
@@ -429,7 +427,7 @@ const CRMKanban = ({
           {/* Lost Opportunities Column */}
           <Card className="mx-1 w-full min-w-[300px] overflow-hidden pb-10">
             <CardTitle className="flex gap-2 p-3 justify-between">
-              <span className="text-sm font-bold">Lost</span>
+              <span className="text-sm font-bold">Потерянные</span>
             </CardTitle>
             <CardContent className="w-full h-full overflow-y-scroll space-y-2">
               {lostOpportunities.map((opportunity: any, index: number) => (
@@ -441,11 +439,11 @@ const CRMKanban = ({
                     <div className="flex flex-col space-y-1">
                       <div>{opportunity.description?.substring(0, 200)}</div>
                       <div className="space-x-1">
-                        <span>Amount:</span>
+                        <span>Сумма:</span>
                         <span>{opportunity.budget?.toString()}</span>
                       </div>
                       <div className="space-x-1">
-                        <span>Expected closing:</span>
+                        <span>Ожидаемое закрытие:</span>
                         <span
                           className={
                             opportunity.close_date &&

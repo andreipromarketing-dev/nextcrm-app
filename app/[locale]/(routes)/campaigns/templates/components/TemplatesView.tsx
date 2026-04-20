@@ -131,7 +131,7 @@ function TemplateRowActions({ row }: { row: { original: Template } }) {
 const columns: ColumnDef<Template>[] = [
   {
     accessorKey: "name",
-    header: "Name",
+    header: "Название",
     cell: ({ row }) => (
       <Link
         href={`/campaigns/templates/${row.original.id}`}
@@ -222,18 +222,14 @@ const TemplatesView = ({ data }: { data: Template[] }) => {
             <CardTitle
               onClick={() => router.push("/campaigns/templates")}
               className="cursor-pointer"
-            >
-              Templates
-            </CardTitle>
+            >Шаблоны</CardTitle>
             <CardDescription></CardDescription>
           </div>
           <div className="flex space-x-2">
             <Button
               size="sm"
               onClick={() => router.push("/campaigns/templates/new")}
-            >
-              + New Template
-            </Button>
+            >+ Новый шаблон</Button>
           </div>
         </div>
         <Separator />
@@ -241,14 +237,14 @@ const TemplatesView = ({ data }: { data: Template[] }) => {
 
       <CardContent>
         {!data || data.length === 0 ? (
-          "No templates found"
+          "Шаблоны не найдены"
         ) : (
           <div className="space-y-4">
             {/* Toolbar */}
             <div className="flex items-center justify-between">
               <div className="flex flex-1 items-center space-x-2">
                 <Input
-                  placeholder="Filter by name ..."
+                  placeholder="Фильтр по названию ..."
                   value={
                     (table.getColumn("name")?.getFilterValue() as string) ?? ""
                   }
@@ -311,9 +307,7 @@ const TemplatesView = ({ data }: { data: Template[] }) => {
                       <TableCell
                         colSpan={columns.length}
                         className="h-24 text-center"
-                      >
-                        No results.
-                      </TableCell>
+                      >Нет результатов.</TableCell>
                     </TableRow>
                   )}
                 </TableBody>
@@ -328,7 +322,7 @@ const TemplatesView = ({ data }: { data: Template[] }) => {
               </div>
               <div className="flex items-center space-x-6 lg:space-x-8">
                 <div className="flex items-center space-x-2">
-                  <p className="text-sm font-medium">Rows per page</p>
+                  <p className="text-sm font-medium">Строк на странице</p>
                   <Select
                     value={`${table.getState().pagination.pageSize}`}
                     onValueChange={(value) => {
@@ -360,7 +354,7 @@ const TemplatesView = ({ data }: { data: Template[] }) => {
                     onClick={() => table.setPageIndex(0)}
                     disabled={!table.getCanPreviousPage()}
                   >
-                    <span className="sr-only">Go to first page</span>
+                    <span className="sr-only">На первую страницу</span>
                     <DoubleArrowLeftIcon className="h-4 w-4" />
                   </Button>
                   <Button
@@ -369,7 +363,7 @@ const TemplatesView = ({ data }: { data: Template[] }) => {
                     onClick={() => table.previousPage()}
                     disabled={!table.getCanPreviousPage()}
                   >
-                    <span className="sr-only">Go to previous page</span>
+                    <span className="sr-only">На предыдущую страницу</span>
                     <ChevronLeftIcon className="h-4 w-4" />
                   </Button>
                   <Button
@@ -378,7 +372,7 @@ const TemplatesView = ({ data }: { data: Template[] }) => {
                     onClick={() => table.nextPage()}
                     disabled={!table.getCanNextPage()}
                   >
-                    <span className="sr-only">Go to next page</span>
+                    <span className="sr-only">На следующую страницу</span>
                     <ChevronRightIcon className="h-4 w-4" />
                   </Button>
                   <Button
@@ -389,7 +383,7 @@ const TemplatesView = ({ data }: { data: Template[] }) => {
                     }
                     disabled={!table.getCanNextPage()}
                   >
-                    <span className="sr-only">Go to last page</span>
+                    <span className="sr-only">На последнюю страницу</span>
                     <DoubleArrowRightIcon className="h-4 w-4" />
                   </Button>
                 </div>

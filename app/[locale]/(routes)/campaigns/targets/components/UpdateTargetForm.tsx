@@ -352,7 +352,7 @@ export function UpdateTargetForm({ initialData, setOpen }: UpdateTargetFormProps
           )} />
         </div>
         <FormField control={form.control} name="description" render={({ field }) => (
-          <FormItem><FormLabel>Description</FormLabel>
+          <FormItem><FormLabel>Описание</FormLabel>
             <FormControl><Input placeholder="Short company description" {...field} value={field.value ?? ''} /></FormControl>
             <FormMessage />
           </FormItem>

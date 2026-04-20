@@ -44,7 +44,7 @@ export function PaymentList({ payments, currency, locale }: PaymentListProps) {
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>Date</TableHead>
+          <TableHead>Дата</TableHead>
           <TableHead>Amount</TableHead>
           <TableHead>Method</TableHead>
           <TableHead>Reference</TableHead>

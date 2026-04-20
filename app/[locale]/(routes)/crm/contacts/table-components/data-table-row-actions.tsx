@@ -101,9 +101,7 @@ export function DataTableRowActions<TData>({
         <DropdownMenuContent align="end" className="w-[160px]">
           <DropdownMenuItem
             onClick={() => router.push(`/crm/contacts/${contact?.id}`)}
-          >
-            View
-          </DropdownMenuItem>
+          >Просмотр</DropdownMenuItem>
           <DropdownMenuItem onClick={() => setUpdateOpen(true)}>
             Update
           </DropdownMenuItem>

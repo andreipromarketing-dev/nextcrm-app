@@ -103,7 +103,7 @@ export function TaxRatesTable({ rates }: TaxRatesTableProps) {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Name</TableHead>
+            <TableHead>Название</TableHead>
             <TableHead>Rate %</TableHead>
             <TableHead>Default</TableHead>
             <TableHead>Active</TableHead>
@@ -168,7 +168,7 @@ export function TaxRatesTable({ rates }: TaxRatesTableProps) {
           </DialogHeader>
           <div className="space-y-4">
             <div className="space-y-2">
-              <Label>Name</Label>
+              <Label>Название</Label>
               <Input
                 placeholder="e.g. Standard VAT"
                 value={name}

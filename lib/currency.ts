@@ -31,7 +31,7 @@ export async function getDefaultCurrency(): Promise<string> {
   const setting = await prismadb.crm_SystemSettings.findUnique({
     where: { key: "default_currency" },
   });
-  return setting?.value || "EUR";
+  return setting?.value || "RUB";
 }
 
 export async function getEnabledCurrencies() {

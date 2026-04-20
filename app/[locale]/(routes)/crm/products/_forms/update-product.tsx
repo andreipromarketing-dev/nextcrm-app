@@ -118,7 +118,7 @@ const UpdateProductForm = ({
       <form action={onAction} className="space-y-4">
         <FormInput
           id="name"
-          label="Name"
+          label="Название"
           type="text"
           errors={fieldErrors}
           defaultValue={product.name}
@@ -132,7 +132,7 @@ const UpdateProductForm = ({
         />
         <FormSelect
           id="type"
-          label="Type"
+          label="Тип"
           type="hidden"
           data={[
             { id: "PRODUCT", name: "Product" },
@@ -143,7 +143,7 @@ const UpdateProductForm = ({
         />
         <FormSelect
           id="status"
-          label="Status"
+          label="Статус"
           type="hidden"
           data={[
             { id: "DRAFT", name: "Draft" },
@@ -229,7 +229,7 @@ const UpdateProductForm = ({
         )}
         <FormTextarea
           id="description"
-          label="Description"
+          label="Описание"
           errors={fieldErrors}
           defaultValue={product.description ?? ""}
         />

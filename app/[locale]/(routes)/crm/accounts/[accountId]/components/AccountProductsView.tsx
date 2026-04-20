@@ -108,8 +108,8 @@ const AccountProductsView = ({
             <TableHeader>
               <TableRow>
                 <TableHead>Product</TableHead>
-                <TableHead>Type</TableHead>
-                <TableHead>Status</TableHead>
+                <TableHead>Тип</TableHead>
+                <TableHead>Статус</TableHead>
                 <TableHead>Qty</TableHead>
                 <TableHead>Price</TableHead>
                 <TableHead>Start</TableHead>
@@ -125,7 +125,7 @@ const AccountProductsView = ({
                       href={`/crm/products/${item.product?.id || item.productId}`}
                       className="hover:underline font-medium"
                     >
-                      {item.product?.name || "Unknown"}
+                      {item.product?.name || "Неизвестно"}
                     </Link>
                   </TableCell>
                   <TableCell>{item.product?.type || "-"}</TableCell>

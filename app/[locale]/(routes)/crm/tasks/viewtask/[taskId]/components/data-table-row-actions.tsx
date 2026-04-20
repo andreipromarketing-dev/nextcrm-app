@@ -46,11 +46,11 @@ export function DataTableRowActions<TData>({
       if (result?.error) {
         toast.error(result.error);
       } else {
-        toast.success("Document was assigned to task");
+        toast.success("Документ прикреплен к задаче");
       }
     } catch (error) {
       console.error(error);
-      toast.error("Something went wrong, while assigning document to task");
+      toast.error("Ошибка при прикреплении документа к задаче");
     } finally {
       router.refresh();
       setLoading(false);
@@ -79,9 +79,7 @@ export function DataTableRowActions<TData>({
           <DropdownMenuItem onClick={onAssign}>
             Connect to task
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setOpen(true)}>
-            View
-          </DropdownMenuItem>
+          <DropdownMenuItem onClick={() => setOpen(true)}>Просмотр</DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </>

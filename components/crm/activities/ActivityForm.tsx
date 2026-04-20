@@ -124,7 +124,7 @@ export function ActivityForm({ open, onOpenChange, entityType, entityId, activit
         </SheetHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           <div className="space-y-1">
-            <Label htmlFor="activity-type">Type</Label>
+            <Label htmlFor="activity-type">Тип</Label>
             <Select value={type} onValueChange={(v) => setType(v as ActivityType)}>
               <SelectTrigger id="activity-type">
                 <SelectValue />
@@ -161,7 +161,7 @@ export function ActivityForm({ open, onOpenChange, entityType, entityId, activit
           </div>
 
           <div className="space-y-1">
-            <Label htmlFor="activity-status">Status</Label>
+            <Label htmlFor="activity-status">Статус</Label>
             <Select value={status} onValueChange={(v) => setStatus(v as ActivityStatus)}>
               <SelectTrigger id="activity-status">
                 <SelectValue />

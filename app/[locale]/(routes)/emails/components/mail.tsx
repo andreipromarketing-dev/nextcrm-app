@@ -163,7 +163,7 @@ export function MailComponent({
               <form>
                 <div className="relative">
                   <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <Input placeholder="Search" className="pl-8" />
+                  <Input placeholder="Поиск" className="pl-8" />
                 </div>
               </form>
             </div>

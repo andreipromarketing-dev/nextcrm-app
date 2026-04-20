@@ -16,9 +16,7 @@ const Feedback = () => {
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild className="hidden sm:flex">
         <Button variant={"secondary"} onClick={() => setOpen(false)}>
-          <ChatBubbleIcon className="w-4 h-4 mr-2" />
-          Feedback
-        </Button>
+          <ChatBubbleIcon className="w-4 h-4 mr-2" />Отзыв</Button>
       </PopoverTrigger>
       <PopoverContent>
         <FeedbackForm setOpen={setOpen} />

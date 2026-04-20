@@ -113,7 +113,7 @@ export function ApiTokens() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Name</TableHead>
+                <TableHead>Название</TableHead>
                 <TableHead>Prefix</TableHead>
                 <TableHead>Created</TableHead>
                 <TableHead>Expires</TableHead>

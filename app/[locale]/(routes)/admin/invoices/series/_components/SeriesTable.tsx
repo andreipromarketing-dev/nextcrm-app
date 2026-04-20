@@ -116,7 +116,7 @@ export function SeriesTable({ series }: SeriesTableProps) {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Name</TableHead>
+            <TableHead>Название</TableHead>
             <TableHead>Prefix Template</TableHead>
             <TableHead>Reset Policy</TableHead>
             <TableHead>Default</TableHead>
@@ -188,7 +188,7 @@ export function SeriesTable({ series }: SeriesTableProps) {
           </DialogHeader>
           <div className="space-y-4">
             <div className="space-y-2">
-              <Label>Name</Label>
+              <Label>Название</Label>
               <Input
                 placeholder="e.g. Standard Invoices"
                 value={name}

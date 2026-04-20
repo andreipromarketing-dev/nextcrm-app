@@ -42,9 +42,9 @@ const TaskViewActions = ({
     setIsLoading(true);
     try {
       await getTaskDone(taskId);
-      toast.success("Success");
+      toast.success("Успешно");
     } catch (error) {
-      toast.error("Error");
+      toast.error("Ошибка");
     } finally {
       setIsLoading(false);
       router.refresh();
@@ -66,7 +66,7 @@ const TaskViewActions = ({
           {isLoading ? (
             <Icons.spinner className="animate-spin w-4 h-4 mr-2" />
           ) : (
-            "Mark as done"
+            "Отметить как выполненное"
           )}
         </Badge>
       )}

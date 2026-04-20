@@ -33,14 +33,14 @@ export function DataTableToolbar<TData>({
         {table.getColumn("taskStatus") && (
           <DataTableFacetedFilter
             column={table.getColumn("taskStatus")}
-            title="Status"
+            title="Статус"
             options={statuses}
           />
         )}
         {table.getColumn("priority") && (
           <DataTableFacetedFilter
             column={table.getColumn("priority")}
-            title="Priority"
+            title="Приоритет"
             options={priorities}
           />
         )}

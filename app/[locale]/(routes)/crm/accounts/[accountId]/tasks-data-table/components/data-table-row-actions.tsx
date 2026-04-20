@@ -74,9 +74,7 @@ export function DataTableRowActions<TData>({
         <DropdownMenuContent align="end" className="w-[160px]">
           <DropdownMenuItem
             onClick={() => router.push(`/crm/tasks/viewtask/${task?.id}`)}
-          >
-            View
-          </DropdownMenuItem>
+          >Просмотр</DropdownMenuItem>
           {/*           <DropdownMenuItem>Make a copy</DropdownMenuItem>
           <DropdownMenuItem>Favorite</DropdownMenuItem> */}
           <DropdownMenuSeparator />

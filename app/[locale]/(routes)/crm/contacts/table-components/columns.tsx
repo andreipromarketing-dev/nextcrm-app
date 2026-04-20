@@ -50,12 +50,12 @@ export const createColumns = (contactTypes: ConfigItem[] = []): ColumnDef<Opport
   {
     accessorKey: "assigned_to_user",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Assigned to" />
+      <DataTableColumnHeader column={column} title="Назначено на" />
     ),
     cell: ({ row }) => (
       <div className="w-[150px]">
         {(row.getValue("assigned_to_user") as { name?: string } | null)?.name ??
-          "Unassigned"}
+          "Не назначено"}
       </div>
     ),
     enableSorting: true,
@@ -68,7 +68,7 @@ export const createColumns = (contactTypes: ConfigItem[] = []): ColumnDef<Opport
     ),
     cell: ({ row }) => (
       <div className="min-w-[150px]">
-        {(row.original as any).assigned_accounts?.name ?? "Unassigned"}
+        {(row.original as any).assigned_accounts?.name ?? "Не назначено"}
       </div>
     ),
     enableSorting: false,
@@ -77,7 +77,7 @@ export const createColumns = (contactTypes: ConfigItem[] = []): ColumnDef<Opport
   {
     accessorKey: "first_name",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Name" />
+      <DataTableColumnHeader column={column} title="Название" />
     ),
     cell: ({ row }) => <div className="">{row.getValue("first_name")}</div>,
     enableSorting: true,
@@ -117,7 +117,7 @@ export const createColumns = (contactTypes: ConfigItem[] = []): ColumnDef<Opport
   {
     accessorKey: "status",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Status" />
+      <DataTableColumnHeader column={column} title="Статус" />
     ),
     cell: ({ row }) => (
       <div className="">{row.original.status ? "Active" : "Inactive"}</div>

@@ -106,7 +106,7 @@ const AddLineItemForm = ({
 
         <FormInput
           id="name"
-          label="Name"
+          label="Название"
           type="text"
           errors={fieldErrors}
           defaultValue={selectedProduct?.name || ""}
@@ -171,7 +171,7 @@ const AddLineItemForm = ({
 
         <FormTextarea
           id="description"
-          label="Description"
+          label="Описание"
           errors={fieldErrors}
         />
 

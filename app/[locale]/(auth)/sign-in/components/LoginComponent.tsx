@@ -95,8 +95,8 @@ export function LoginComponent() {
   return (
     <Card className="shadow-lg my-5">
       <CardHeader className="space-y-1">
-        <CardTitle className="text-2xl">Login</CardTitle>
-        <CardDescription>Choose your sign-in method</CardDescription>
+        <CardTitle className="text-2xl">Вход</CardTitle>
+        <CardDescription>Выберите способ входа</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
         <Button
@@ -105,18 +105,14 @@ export function LoginComponent() {
           disabled={isLoading}
           className="w-full"
         >
-          <Icons.google className="mr-2 h-4 w-4" />
-          Continue with Google
-        </Button>
+          <Icons.google className="mr-2 h-4 w-4" />Продолжить с Google</Button>
 
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
             <span className="w-full border-t" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-background px-2 text-muted-foreground">
-              Or continue with email
-            </span>
+            <span className="bg-background px-2 text-muted-foreground">Или войти через email</span>
           </div>
         </div>
 
@@ -135,16 +131,14 @@ export function LoginComponent() {
               />
             </div>
             <Button onClick={sendOtp} disabled={isLoading || !email}>
-              <MailIcon className="mr-2 h-4 w-4" />
-              Send verification code
-            </Button>
+              <MailIcon className="mr-2 h-4 w-4" />Отправить код</Button>
           </div>
         )}
 
         {step === "otp" && (
           <div className="grid gap-3">
             <p className="text-sm text-muted-foreground">
-              Enter the 6-digit code sent to <strong>{email}</strong>
+              Введите код, отправленный на <strong>{email}</strong>
             </p>
             <div className="flex justify-center">
               <InputOTP
@@ -164,7 +158,7 @@ export function LoginComponent() {
               </InputOTP>
             </div>
             <Button onClick={verifyOtp} disabled={isLoading || otp.length !== 6}>
-              Verify and sign in
+              Подтвердить и войти
             </Button>
             <Button
               variant="ghost"
@@ -175,7 +169,7 @@ export function LoginComponent() {
               }}
               disabled={isLoading}
             >
-              Use a different email
+              Использовать другой email
             </Button>
           </div>
         )}

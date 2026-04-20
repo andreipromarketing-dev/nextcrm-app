@@ -39,11 +39,11 @@ export function ConfigEditDialog({ configType, id, currentName, open, onOpenChan
         <DialogHeader><DialogTitle>Edit Value</DialogTitle></DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 pt-2">
           <div className="space-y-1">
-            <Label htmlFor="edit-name">Name</Label>
+            <Label htmlFor="edit-name">Название</Label>
             <Input id="edit-name" value={name} onChange={(e) => setName(e.target.value)} maxLength={100} required />
           </div>
           <Button type="submit" disabled={loading} className="w-full">
-            {loading ? "Saving…" : "Save"}
+            {loading ? "Saving…" : "Сохранить"}
           </Button>
         </form>
       </DialogContent>

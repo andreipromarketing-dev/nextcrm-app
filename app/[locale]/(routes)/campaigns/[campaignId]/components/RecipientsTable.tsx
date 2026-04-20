@@ -38,7 +38,7 @@ export default function RecipientsTable({ sends }: { sends: Send[] }) {
 
   return (
     <div className="flex flex-col gap-3">
-      <h2 className="text-lg font-semibold">Recipients</h2>
+      <h2 className="text-lg font-semibold">Получатели</h2>
       <div className="flex gap-2">
         <Input
           placeholder="Search name or email..."
@@ -62,7 +62,7 @@ export default function RecipientsTable({ sends }: { sends: Send[] }) {
         <table className="w-full text-sm">
           <thead className="bg-muted/50">
             <tr>
-              {["Name", "Email", "Status", "Opened", "Clicked", "Bounced"].map((h) => (
+              {["Название", "Email", "Статус", "Opened", "Clicked", "Bounced"].map((h) => (
                 <th
                   key={h}
                   className="px-3 py-2 text-left font-medium text-muted-foreground"

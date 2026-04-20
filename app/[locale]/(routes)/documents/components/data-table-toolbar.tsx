@@ -31,15 +31,11 @@ export function DataTableToolbar<TData>({
             <button
               className={`px-2 py-1 text-xs ${searchMode === "name" ? "bg-primary text-primary-foreground" : "text-muted-foreground"} rounded-l-md`}
               onClick={() => { setSearchMode("name"); table.setGlobalFilter(""); }}
-            >
-              Name
-            </button>
+            >Название</button>
             <button
               className={`px-2 py-1 text-xs ${searchMode === "content" ? "bg-primary text-primary-foreground" : "text-muted-foreground"} rounded-r-md`}
               onClick={() => { setSearchMode("content"); table.getColumn("document_name")?.setFilterValue(""); }}
-            >
-              Content
-            </button>
+            >Содержимое</button>
           </div>
 
           {searchMode === "name" ? (
@@ -63,14 +59,14 @@ export function DataTableToolbar<TData>({
         {table.getColumn("document_system_type") && (
           <DataTableFacetedFilter
             column={table.getColumn("document_system_type")}
-            title="Type"
+            title="Тип"
             options={documentSystemTypes}
           />
         )}
         {table.getColumn("processing_status") && (
           <DataTableFacetedFilter
             column={table.getColumn("processing_status")}
-            title="Status"
+            title="Статус"
             options={processingStatuses}
           />
         )}

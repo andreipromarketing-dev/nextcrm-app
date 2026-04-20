@@ -19,7 +19,7 @@ import { RetryEnrichmentButton } from "./RetryEnrichmentButton";
 export const dynamic = "force-dynamic";
 
 const STATUS_LABELS = {
-  PENDING:   { label: "Pending",     variant: "secondary" } as const,
+  PENDING:   { label: "Ожидает",     variant: "secondary" } as const,
   RUNNING:   { label: "Running",     variant: "default" } as const,
   COMPLETED: { label: "Completed",   variant: "default" } as const,
   FAILED:    { label: "Failed",      variant: "destructive" } as const,
@@ -67,7 +67,7 @@ export default async function EnrichmentJobsPage() {
             <TableHeader>
               <TableRow>
                 <TableHead>Contact</TableHead>
-                <TableHead>Status</TableHead>
+                <TableHead>Статус</TableHead>
                 <TableHead>Fields</TableHead>
                 <TableHead>Started</TableHead>
                 <TableHead>By</TableHead>

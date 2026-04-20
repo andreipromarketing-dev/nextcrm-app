@@ -7,7 +7,7 @@ import {
 export const statuses = [
   {
     value: "ACTIVE",
-    label: "Active",
+    label: "В работе",
     icon: QuestionMarkCircledIcon,
   },
   {
@@ -17,7 +17,7 @@ export const statuses = [
   },
   {
     value: "PENDING",
-    label: "Pending",
+    label: "Ожидает",
     icon: CircleIcon,
   },
   {

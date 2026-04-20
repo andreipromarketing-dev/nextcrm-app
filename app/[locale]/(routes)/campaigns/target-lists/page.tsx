@@ -9,8 +9,8 @@ const TargetListsPage = async () => {
   const targetLists = await getTargetLists();
   return (
     <Container
-      title="Target Lists"
-      description="Manage your target lists for campaigns and outreach"
+      title="Списки рассылок"
+      description="Управляйте списками рассылок"
     >
       <Suspense fallback={<CrmTableSkeleton />}>
         <TargetListsView data={targetLists} />

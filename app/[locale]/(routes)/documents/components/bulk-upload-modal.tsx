@@ -174,13 +174,11 @@ export function BulkUploadModal({ accountId }: BulkUploadModalProps) {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button>
-          <Plus className="mr-2 h-4 w-4" />
-          Upload Documents
-        </Button>
+          <Plus className="mr-2 h-4 w-4" />Загрузить документы</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[600px]">
         <DialogHeader>
-          <DialogTitle>Upload Documents</DialogTitle>
+          <DialogTitle>Загрузить документы</DialogTitle>
         </DialogHeader>
 
         <div

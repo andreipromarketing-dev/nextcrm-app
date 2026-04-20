@@ -77,7 +77,7 @@ const TaskPage = async (props: TaskPageProps) => {
                       Date created
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      {moment(task.createdAt).format("YYYY-MM-DD HH:mm:ss")}
+                      {moment(task.createdAt).format("DD.MM.YYYY HH:mm:ss")}
                     </p>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ const TaskPage = async (props: TaskPageProps) => {
                   <div className="space-y-1">
                     <p className="text-sm font-medium leading-none">Date due</p>
                     <p className="text-sm text-muted-foreground">
-                      {moment(task.dueDateAt).format("YYYY-MM-DD HH:mm")}
+                      {moment(task.dueDateAt).format("DD.MM.YYYY HH:mm")}
                     </p>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ const TaskPage = async (props: TaskPageProps) => {
                       Last modified
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      {moment(task.lastEditedAt).format("YYYY-MM-DD HH:mm:ss")}
+                      {moment(task.lastEditedAt).format("DD.MM.YYYY HH:mm:ss")}
                     </p>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ const TaskPage = async (props: TaskPageProps) => {
                 <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
                   <Shield className="mt-px h-5 w-5" />
                   <div className="space-y-1">
-                    <p className="text-sm font-medium leading-none">Status</p>
+                    <p className="text-sm font-medium leading-none">Статус</p>
                     <Badge
                       variant={
                         task.taskStatus === "COMPLETE"
@@ -136,7 +136,7 @@ const TaskPage = async (props: TaskPageProps) => {
                       Assigned to
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      {task.assigned_user?.name || "Not assigned"}
+                      {task.assigned_user?.name || "Не назначено"}
                     </p>
                   </div>
                 </div>
@@ -147,7 +147,7 @@ const TaskPage = async (props: TaskPageProps) => {
                       Created by
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      {creatorUser?.name || "Unknown"}
+                      {creatorUser?.name || "Неизвестно"}
                     </p>
                   </div>
                 </div>

@@ -64,8 +64,8 @@ export function AccountsTab({
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>Account</TableHead>
-          <TableHead>Status</TableHead>
+          <TableHead>Компания</TableHead>
+          <TableHead>Статус</TableHead>
           <TableHead className="text-right">Qty</TableHead>
           <TableHead className="text-right">Price</TableHead>
           <TableHead>Start Date</TableHead>

@@ -177,7 +177,7 @@ export function Step4Schedule({
               </div>
             </div>
             <div>
-              <Label className="text-xs">Template</Label>
+              <Label className="text-xs">Шаблон</Label>
               <select
                 className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm"
                 value={fu.template_id}

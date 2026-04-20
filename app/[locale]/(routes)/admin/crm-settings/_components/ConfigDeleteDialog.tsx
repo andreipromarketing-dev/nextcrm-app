@@ -66,7 +66,7 @@ export function ConfigDeleteDialog({ configType, item, allValues, open, onOpenCh
             onClick={handleDelete}
             disabled={loading || (item.usageCount > 0 && !replacementId)}
           >
-            {loading ? "Deleting…" : item.usageCount > 0 ? "Reassign & Delete" : "Delete"}
+            {loading ? "Deleting…" : item.usageCount > 0 ? "Reassign & Delete" : "Удалить"}
           </Button>
         </div>
       </DialogContent>

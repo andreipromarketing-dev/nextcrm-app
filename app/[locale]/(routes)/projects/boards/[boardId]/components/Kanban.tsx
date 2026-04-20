@@ -149,9 +149,7 @@ function TaskItem({ task, onDelete, onDone, onEdit, router }: any) {
               className="gap-2"
               onClick={() => router.push(`/projects/tasks/viewtask/${task.id}`)}
             >
-              <EyeIcon className="w-4 h-4 opacity-50" />
-              View
-            </DropdownMenuItem>
+              <EyeIcon className="w-4 h-4 opacity-50" />Просмотр</DropdownMenuItem>
             {task.taskStatus !== "COMPLETE" && (
               <DropdownMenuItem className="gap-2" onClick={() => onEdit(task)}>
                 <Pencil className="w-4 h-4 opacity-50" />
@@ -175,7 +173,7 @@ function TaskItem({ task, onDelete, onDone, onEdit, router }: any) {
         </DropdownMenu>
       </div>
       <div className="py-1">
-        Due date: {moment(task.dueDateAt).format("YYYY-MM-DD")}
+        Due date: {moment(task.dueDateAt).format("DD.MM.YYYY")}
       </div>
       <div className="my-2">
         <p
@@ -445,9 +443,9 @@ const Kanban = (props: any) => {
     setIsLoading(true);
     try {
       await markTaskDone(id);
-      toast.success("Success");
+      toast.success("Успешно");
     } catch (error) {
-      toast.error("Error");
+      toast.error("Ошибка");
     } finally {
       setIsLoading(false);
       router.refresh();

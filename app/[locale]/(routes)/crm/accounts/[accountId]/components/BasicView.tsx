@@ -81,16 +81,14 @@ export async function BasicView({ data }: OppsViewProps) {
                 <div className="space-y-1">
                   <p className="text-sm font-medium leading-none">VAT number</p>
                   <p className="text-sm text-muted-foreground">
-                    {data.vat ? data.vat : "Not assigned"}
+                    {data.vat ? data.vat : "Не назначено"}
                   </p>
                 </div>
               </div>
               <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
                 <File className="mt-px h-5 w-5" />
                 <div className="space-y-1">
-                  <p className="text-sm font-medium leading-none">
-                    Description
-                  </p>
+                  <p className="text-sm font-medium leading-none">Описание</p>
                   <p className="text-sm text-muted-foreground">
                     {data.description}
                   </p>
@@ -153,7 +151,7 @@ export async function BasicView({ data }: OppsViewProps) {
                     Assigned to
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    {data.assigned_to_user?.name ?? "Unassigned"}
+                    {data.assigned_to_user?.name ?? "Не назначено"}
                   </p>
                 </div>
               </div>
@@ -194,14 +192,14 @@ export async function BasicView({ data }: OppsViewProps) {
               <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
                 <LightningBoltIcon className="mt-px h-5 w-5" />
                 <div className="space-y-1">
-                  <p className="text-sm font-medium leading-none">Status</p>
+                  <p className="text-sm font-medium leading-none">Статус</p>
                   <p className="text-sm text-muted-foreground">{data.status}</p>
                 </div>
               </div>
               <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
                 <CoinsIcon className="mt-px h-5 w-5" />
                 <div className="space-y-1">
-                  <p className="text-sm font-medium leading-none">Type</p>
+                  <p className="text-sm font-medium leading-none">Тип</p>
                   <p className="text-sm text-muted-foreground">{data.type}</p>
                 </div>
               </div>
@@ -379,7 +377,7 @@ export async function BasicView({ data }: OppsViewProps) {
           <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
             <ClipboardList className="mt-px h-5 w-5" />
             <div className="space-y-1">
-              <p className="text-sm font-medium leading-none">Description</p>
+              <p className="text-sm font-medium leading-none">Описание</p>
               <p className="text-sm text-muted-foreground">
                 {data.description}
               </p>
@@ -447,7 +445,7 @@ export async function BasicView({ data }: OppsViewProps) {
           <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
             <List className="mt-px h-5 w-5" />
             <div className="space-y-1">
-              <p className="text-sm font-medium leading-none">Type</p>
+              <p className="text-sm font-medium leading-none">Тип</p>
               <p className="text-sm text-muted-foreground"></p>
             </div>
           </div>

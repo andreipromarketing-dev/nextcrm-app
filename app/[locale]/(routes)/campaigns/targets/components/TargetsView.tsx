@@ -38,16 +38,14 @@ const TargetsView = ({ data }: any) => {
             <CardTitle
               onClick={() => router.push("/crm/targets")}
               className="cursor-pointer"
-            >
-              Targets
-            </CardTitle>
+            >Базы контактов</CardTitle>
             <CardDescription></CardDescription>
           </div>
           <div className="flex space-x-2">
             <ImportTargetsModal />
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
-                <Button size="sm">+ New Target</Button>
+                <Button size="sm">+ Новая база</Button>
               </SheetTrigger>
               <SheetContent className="max-w-2xl overflow-y-auto">
                 <SheetHeader>
@@ -68,7 +66,7 @@ const TargetsView = ({ data }: any) => {
 
       <CardContent>
         {!data || data.length === 0 ? (
-          "No targets found"
+          "Базы контактов не найдены"
         ) : (
           <TargetsDataTable data={data} columns={columns} />
         )}

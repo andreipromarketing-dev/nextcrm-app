@@ -69,12 +69,12 @@ export function DataTableRowActions<TData>({
     try {
       const result = await watchAccount(account.id);
       if (result.error) {
-        toast.error("Error");
+        toast.error("Ошибка");
       } else {
         toast.success(`You are now Account: ${account.name}, watcher`);
       }
     } catch (error) {
-      toast.error("Error");
+      toast.error("Ошибка");
       console.log(error);
     } finally {
       setLoading(false);
@@ -86,12 +86,12 @@ export function DataTableRowActions<TData>({
     try {
       const result = await unwatchAccount(account.id);
       if (result.error) {
-        toast.error("Error");
+        toast.error("Ошибка");
       } else {
         toast.success(`You are no longer Account: ${account.name}, watcher`);
       }
     } catch (error) {
-      toast.error("Error");
+      toast.error("Ошибка");
       console.log(error);
     } finally {
       setLoading(false);
@@ -131,9 +131,7 @@ export function DataTableRowActions<TData>({
         <DropdownMenuContent align="end" className="w-[260px]">
           <DropdownMenuItem
             onClick={() => router.push(`/crm/accounts/${account?.id}`)}
-          >
-            View
-          </DropdownMenuItem>
+          >Просмотр</DropdownMenuItem>
           <DropdownMenuItem onClick={() => setUpdateOpen(true)}>
             Update
           </DropdownMenuItem>

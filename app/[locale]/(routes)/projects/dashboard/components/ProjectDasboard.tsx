@@ -73,9 +73,9 @@ const ProjectDashboardCockpit = ({
     try {
       await getTaskDone(taskId);
     } catch (error) {
-      toast.error("Error");
+      toast.error("Ошибка");
     } finally {
-      toast.success("Success");
+      toast.success("Успешно");
       router.refresh();
     }
   };
@@ -108,7 +108,7 @@ const ProjectDashboardCockpit = ({
                   task.dueDateAt < new Date() ? "text-red-500 text-xs" : ""
                 }
               >
-                Due date: {moment(task.dueDateAt).format("YYYY-MM-DD")}
+                Due date: {moment(task.dueDateAt).format("DD.MM.YYYY")}
               </div>
               <div>
                 <p
@@ -162,7 +162,7 @@ const ProjectDashboardCockpit = ({
               </Badge>
 
               <FormSheet
-                trigger={"Edit"}
+                trigger={"Редактировать"}
                 title="Update task"
                 description="Edit task details including title, description, due date, and priority"
                 onClose={closeRef}
@@ -214,7 +214,7 @@ const ProjectDashboardCockpit = ({
                     : "text-xs"
                 }
               >
-                Due date: {moment(task.dueDateAt).format("YYYY-MM-DD")}
+                Due date: {moment(task.dueDateAt).format("DD.MM.YYYY")}
               </div>
               <div>
                 <p

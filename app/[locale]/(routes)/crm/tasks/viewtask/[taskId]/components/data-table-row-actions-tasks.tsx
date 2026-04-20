@@ -46,11 +46,11 @@ export function DataTableRowActionsTasks<TData>({
       if (result?.error) {
         toast.error(result.error);
       } else {
-        toast.success("Document was disconnected from task");
+        toast.success("Документ откреплен от задачи");
       }
     } catch (error) {
       console.error(error);
-      toast.error("Something went wrong, while disconnecting document from task");
+      toast.error("Ошибка при откреплении документа");
     } finally {
       router.refresh();
       setLoading(false);
@@ -79,9 +79,7 @@ export function DataTableRowActionsTasks<TData>({
           <DropdownMenuItem onClick={onDisconnect}>
             Disconnect from task
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setOpen(true)}>
-            View
-          </DropdownMenuItem>
+          <DropdownMenuItem onClick={() => setOpen(true)}>Просмотр</DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </>

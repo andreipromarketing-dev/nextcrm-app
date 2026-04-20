@@ -65,10 +65,10 @@ export function TeamConversations({
       if (result?.error) {
         toast.error(result.error);
       } else {
-        toast.success("Success");
+        toast.success("Успешно");
       }
     } catch (error) {
-      toast.error("Something went wrong while sending comment to the DB");
+      toast.error("Ошибка при сохранении комментария");
     } finally {
       form.reset({
         comment: "",
@@ -93,7 +93,7 @@ export function TeamConversations({
                 <FormControl>
                   <Input
                     disabled={isLoading}
-                    placeholder="Your comment ..."
+                    placeholder="Ваш комментарий..."
                     {...field}
                   />
                 </FormControl>
@@ -137,7 +137,7 @@ export function TeamConversations({
                     </p>
                   </div>
                   <div className="text-xs opacity-50">
-                    {moment(comment.createdAt).format("YYYY-MM-DD-HH:mm")}
+                    {moment(comment.createdAt).format("DD.MM.YYYY HH:mm")}
                   </div>
                 </div>
               </div>

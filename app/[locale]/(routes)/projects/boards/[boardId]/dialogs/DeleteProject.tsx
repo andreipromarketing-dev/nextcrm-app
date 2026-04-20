@@ -85,7 +85,7 @@ const DeleteProjectDialog = ({ boardId, boardName }: Props) => {
             Cancel
           </Button>
           <Button variant="destructive" onClick={onDelete}>
-            {isLoading ? "Deleting..." : "Delete"}
+            {isLoading ? "Deleting..." : "Удалить"}
           </Button>
         </DialogFooter>
       </DialogContent>

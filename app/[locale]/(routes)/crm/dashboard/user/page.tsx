@@ -44,15 +44,13 @@ const UserDashboardPage = async () => {
   return (
     <Container
       title={`${session.user.name} — My Dashboard`}
-      description="Your personal CRM overview"
+      description="Ваша персональная сводка CRM"
     >
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">
-              Total Tasks
-            </CardTitle>
+            <CardTitle className="text-sm font-medium text-muted-foreground">Всего задач</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{tasks.length}</div>
@@ -60,9 +58,7 @@ const UserDashboardPage = async () => {
         </Card>
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">
-              Open Tasks
-            </CardTitle>
+            <CardTitle className="text-sm font-medium text-muted-foreground">Открытые задачи</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{openTasks.length}</div>
@@ -70,9 +66,7 @@ const UserDashboardPage = async () => {
         </Card>
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">
-              My Leads
-            </CardTitle>
+            <CardTitle className="text-sm font-medium text-muted-foreground">Мои лиды</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{openLeads.length}</div>
@@ -80,9 +74,7 @@ const UserDashboardPage = async () => {
         </Card>
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-muted-foreground">
-              Active Opportunities
-            </CardTitle>
+            <CardTitle className="text-sm font-medium text-muted-foreground">Активные сделки</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
@@ -96,20 +88,18 @@ const UserDashboardPage = async () => {
         {/* Tasks */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">My Tasks</CardTitle>
+            <CardTitle className="text-base">Мои задачи</CardTitle>
           </CardHeader>
           <CardContent className="p-0">
             {tasks.length === 0 ? (
-              <p className="text-sm text-muted-foreground px-6 pb-4">
-                No tasks assigned.
-              </p>
+              <p className="text-sm text-muted-foreground px-6 pb-4">Нет назначенных задач.</p>
             ) : (
               <Table>
                 <TableHeader>
                   <TableRow>
                     <TableHead>Title</TableHead>
                     <TableHead>Priority</TableHead>
-                    <TableHead>Status</TableHead>
+                    <TableHead>Статус</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -156,18 +146,16 @@ const UserDashboardPage = async () => {
         {/* Opportunities */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">My Opportunities</CardTitle>
+            <CardTitle className="text-base">Мои сделки</CardTitle>
           </CardHeader>
           <CardContent className="p-0">
             {opportunities.length === 0 ? (
-              <p className="text-sm text-muted-foreground px-6 pb-4">
-                No opportunities assigned.
-              </p>
+              <p className="text-sm text-muted-foreground px-6 pb-4">Нет назначенных сделок.</p>
             ) : (
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Name</TableHead>
+                    <TableHead>Название</TableHead>
                     <TableHead>Stage</TableHead>
                     <TableHead>Budget</TableHead>
                   </TableRow>
@@ -200,21 +188,19 @@ const UserDashboardPage = async () => {
         {/* Leads */}
         <Card className="md:col-span-2">
           <CardHeader>
-            <CardTitle className="text-base">My Leads</CardTitle>
+            <CardTitle className="text-base">Мои лиды</CardTitle>
           </CardHeader>
           <CardContent className="p-0">
             {leads.length === 0 ? (
-              <p className="text-sm text-muted-foreground px-6 pb-4">
-                No leads assigned.
-              </p>
+              <p className="text-sm text-muted-foreground px-6 pb-4">Нет назначенных лидов.</p>
             ) : (
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Name</TableHead>
+                    <TableHead>Название</TableHead>
                     <TableHead>Company</TableHead>
                     <TableHead>Email</TableHead>
-                    <TableHead>Status</TableHead>
+                    <TableHead>Статус</TableHead>
                     <TableHead>Source</TableHead>
                   </TableRow>
                 </TableHeader>

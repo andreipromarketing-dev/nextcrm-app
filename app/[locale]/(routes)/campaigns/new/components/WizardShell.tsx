@@ -102,7 +102,7 @@ export function WizardShell({
     }
   };
 
-  const steps = ["Details", "Template", "Audience", "Schedule"];
+  const steps = ["Details", "Шаблон", "Audience", "Schedule"];
 
   return (
     <div className="flex flex-col gap-6">

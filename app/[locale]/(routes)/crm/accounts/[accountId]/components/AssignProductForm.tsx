@@ -110,7 +110,7 @@ const AssignProductForm = ({
         />
         <FormSelect
           id="status"
-          label="Status"
+          label="Статус"
           type="hidden"
           data={[
             { id: "ACTIVE", name: "Active" },

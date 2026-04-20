@@ -54,7 +54,7 @@ export const columns: ColumnDef<DocumentRow>[] = [
   {
     accessorKey: "createdAt",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Date" />
+      <DataTableColumnHeader column={column} title="Дата" />
     ),
     cell: ({ row }) => (
       <div className="w-[80px] text-muted-foreground text-sm">
@@ -66,7 +66,7 @@ export const columns: ColumnDef<DocumentRow>[] = [
   {
     accessorKey: "document_name",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Document" />
+      <DataTableColumnHeader column={column} title="Документ" />
     ),
     cell: ({ row }) => {
       const mimeLabel = getMimeLabel(row.original.document_file_mimeType);
@@ -98,7 +98,7 @@ export const columns: ColumnDef<DocumentRow>[] = [
   {
     accessorKey: "document_system_type",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Type" />
+      <DataTableColumnHeader column={column} title="Тип" />
     ),
     cell: ({ row }) => {
       const type = row.getValue("document_system_type") as string | null;
@@ -114,7 +114,7 @@ export const columns: ColumnDef<DocumentRow>[] = [
   {
     id: "account",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Account" />
+      <DataTableColumnHeader column={column} title="Компания" />
     ),
     cell: ({ row }) => {
       const accounts = row.original.accounts;
@@ -129,7 +129,7 @@ export const columns: ColumnDef<DocumentRow>[] = [
   {
     accessorKey: "processing_status",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Status" />
+      <DataTableColumnHeader column={column} title="Статус" />
     ),
     cell: ({ row }) => (
       <ProcessingStatusBadge status={row.getValue("processing_status")} />
@@ -139,11 +139,11 @@ export const columns: ColumnDef<DocumentRow>[] = [
   {
     accessorKey: "assigned_to_user",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Assigned to" />
+      <DataTableColumnHeader column={column} title="Назначено на" />
     ),
     cell: ({ row }) => (
       <div className="w-[120px] text-sm">
-        {(row.getValue("assigned_to_user") as { name: string | null } | null)?.name ?? "Unassigned"}
+        {(row.getValue("assigned_to_user") as { name: string | null } | null)?.name ?? "Не назначено"}
       </div>
     ),
     enableSorting: false,

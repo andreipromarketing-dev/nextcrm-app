@@ -33,7 +33,7 @@ async function getReportData(category: string, filters: ReturnType<typeof parseS
     case "users":
       return { data: await usersActions.getUserGrowth(filters), headers: ["Month", "Users"] };
     default:
-      return { data: [], headers: ["Name", "Value"] };
+      return { data: [], headers: ["Название", "Value"] };
   }
 }
 

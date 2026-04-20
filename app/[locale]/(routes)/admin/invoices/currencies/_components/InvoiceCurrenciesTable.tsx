@@ -80,7 +80,7 @@ export function InvoiceCurrenciesTable({ currencies }: Props) {
         <TableHeader>
           <TableRow>
             <TableHead>Code</TableHead>
-            <TableHead>Name</TableHead>
+            <TableHead>Название</TableHead>
             <TableHead>Symbol</TableHead>
             <TableHead>Active</TableHead>
           </TableRow>

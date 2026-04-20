@@ -51,7 +51,7 @@ export function AdminFilters({
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="all">All entities</SelectItem>
-          <SelectItem value="account">Account</SelectItem>
+          <SelectItem value="account">Компания</SelectItem>
           <SelectItem value="contact">Contact</SelectItem>
           <SelectItem value="lead">Lead</SelectItem>
           <SelectItem value="opportunity">Opportunity</SelectItem>

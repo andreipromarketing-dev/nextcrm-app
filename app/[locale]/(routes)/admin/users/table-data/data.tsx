@@ -3,7 +3,7 @@ import { StopIcon, PauseIcon, PlayIcon } from "@radix-ui/react-icons";
 export const statuses = [
   {
     value: "ACTIVE",
-    label: "Active",
+    label: "В работе",
     icon: PlayIcon,
   },
   {
@@ -13,7 +13,7 @@ export const statuses = [
   },
   {
     value: "PENDING",
-    label: "Pending",
+    label: "Ожидает",
     icon: PauseIcon,
   },
 ];

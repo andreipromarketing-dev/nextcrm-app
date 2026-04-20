@@ -143,7 +143,7 @@ export function InvoicesTable({
       <TableHeader>
         <TableRow>
           <SortHeader field="number">{labels.number ?? "Number"}</SortHeader>
-          <SortHeader field="account">{labels.account ?? "Account"}</SortHeader>
+          <SortHeader field="account">{labels.account ?? "Компания"}</SortHeader>
           <SortHeader field="issueDate">
             {labels.issueDate ?? "Issued"}
           </SortHeader>
@@ -151,7 +151,7 @@ export function InvoicesTable({
           <SortHeader field="grandTotal">
             {labels.total ?? "Total"}
           </SortHeader>
-          <SortHeader field="status">{labels.status ?? "Status"}</SortHeader>
+          <SortHeader field="status">{labels.status ?? "Статус"}</SortHeader>
         </TableRow>
       </TableHeader>
       <TableBody>

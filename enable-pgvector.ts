@@ -17,7 +17,7 @@ async function enablePgvector() {
     const result = await prisma.$queryRaw`SELECT extname, extversion FROM pg_extension WHERE extname = 'vector'`;
     console.log("Extension info:", JSON.stringify(result));
   } catch (e) {
-    console.log("Error:", e.message);
+    console.log("Error:", e instanceof Error ? e.message : String(e));
   } finally {
     await prisma.$disconnect();
     await pool.end();

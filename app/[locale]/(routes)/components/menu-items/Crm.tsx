@@ -14,6 +14,9 @@ import { NavItem } from "../nav-main";
 type Props = {
   localizations: {
     title: string;
+    dashboard: string;
+    myDashboard: string;
+    overview: string;
     accounts: string;
     contacts: string;
     leads: string;
@@ -29,15 +32,15 @@ export const getCrmMenuItem = ({ localizations }: Props): NavItem => {
     icon: Coins,
     items: [
       {
-        title: "Dashboard",
+        title: localizations.dashboard,
         url: "/crm/dashboard",
       },
       {
-        title: "My Dashboard",
+        title: localizations.myDashboard,
         url: "/crm/dashboard/user",
       },
       {
-        title: "Overview",
+        title: localizations.overview,
         url: "/crm",
       },
       {

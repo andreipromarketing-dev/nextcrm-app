@@ -55,8 +55,13 @@ Complete invoicing system built into NextCRM — create, issue, pay, duplicate, 
 - **PDF export** — server-side PDF generation at `/api/invoices/[id]/pdf`
 - **Activity log** — every status change and edit is recorded with actor and timestamp
 - **Admin settings** — manage tax rates, invoice series, currencies, and default settings from `/admin/invoices`
-- **i18n** — full English and Czech translations
 - **Server actions** — create/update operations use Next.js server actions with Zod validation (no API route middleman)
+- **i18n** — full English and Czech translations
+
+---
+
+### 🇷🇺 Russian Localization *(NEW)*
+NextCRM now completely supports the Russian language across the UI and DB stages, including Russian Ruble (`RUB`) as a default currency. The formatting for dates matches the Russian standard (`DD.MM.YYYY`).
 
 ---
 

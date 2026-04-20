@@ -23,7 +23,7 @@ export function NavMainDemo() {
       icon: Coins,
       items: [
         { title: "Dashboard", url: "/crm/dashboard" },
-        { title: "My Dashboard", url: "/crm/dashboard/user" },
+        { title: "Мой дашборд", url: "/crm/dashboard/user" },
         { title: "Overview", url: "/crm" },
         { title: "Accounts", url: "/crm/accounts" },
         { title: "Contacts", url: "/crm/contacts" },

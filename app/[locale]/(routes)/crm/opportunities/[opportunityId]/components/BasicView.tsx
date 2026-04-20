@@ -92,7 +92,7 @@ export async function BasicView({ data }: OppsViewProps) {
               <p className="text-sm text-muted-foreground">
                 {data.assigned_sales_stage?.name
                   ? data.assigned_sales_stage?.name
-                  : "Not assigned"}
+                  : "Не назначено"}
               </p>
             </div>
           </div>
@@ -106,7 +106,7 @@ export async function BasicView({ data }: OppsViewProps) {
           <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
             <ClipboardList className="mt-px h-5 w-5" />
             <div className="space-y-1">
-              <p className="text-sm font-medium leading-none">Description</p>
+              <p className="text-sm font-medium leading-none">Описание</p>
               <p className="text-sm text-muted-foreground">
                 {data.description}
               </p>
@@ -130,7 +130,7 @@ export async function BasicView({ data }: OppsViewProps) {
               <p className="text-sm text-muted-foreground">
                 {data.assigned_account?.name
                   ? data.assigned_account?.name
-                  : "Not assigned"}
+                  : "Не назначено"}
               </p>
             </div>
           </div>
@@ -178,7 +178,7 @@ export async function BasicView({ data }: OppsViewProps) {
           <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
             <List className="mt-px h-5 w-5" />
             <div className="space-y-1">
-              <p className="text-sm font-medium leading-none">Type</p>
+              <p className="text-sm font-medium leading-none">Тип</p>
               <p className="text-sm text-muted-foreground">
                 {data.assigned_type?.name ? data.assigned_type?.name : "N/A"}
               </p>

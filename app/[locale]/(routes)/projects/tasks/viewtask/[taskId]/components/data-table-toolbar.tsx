@@ -23,7 +23,7 @@ export function DataTableToolbar<TData>({
     <div className="flex items-center justify-between">
       <div className="flex flex-1 items-center space-x-2">
         <Input
-          placeholder="Document name ..."
+          placeholder="Название документа..."
           value={
             (table.getColumn("document_name")?.getFilterValue() as string) ?? ""
           }
@@ -35,14 +35,14 @@ export function DataTableToolbar<TData>({
         {table.getColumn("taskStatus") && (
           <DataTableFacetedFilter
             column={table.getColumn("taskStatus")}
-            title="Status"
+            title="Статус"
             options={statuses}
           />
         )}
         {table.getColumn("priority") && (
           <DataTableFacetedFilter
             column={table.getColumn("priority")}
-            title="Priority"
+            title="Приоритет"
             options={priorities}
           />
         )}

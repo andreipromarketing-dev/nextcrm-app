@@ -58,19 +58,19 @@ const CRMTaskPage = async (props: TaskPageProps) => {
               <tr>
                 <td className="py-2 px-4 border-b">Date created</td>
                 <td className="py-2 px-4 border-b">
-                  {moment(task.createdAt).format("YYYY-MM-DD")}
+                  {moment(task.createdAt).format("DD.MM.YYYY")}
                 </td>
               </tr>
               <tr>
                 <td className="py-2 px-4 border-b">Date due</td>
                 <td className="py-2 px-4 border-b">
-                  {moment(task.dueDateAt).format("YYYY-MM-DD")}
+                  {moment(task.dueDateAt).format("DD.MM.YYYY")}
                 </td>
               </tr>
               <tr>
                 <td className="py-2 px-4 border-b">Date modified</td>
                 <td className="py-2 px-4 border-b">
-                  {moment(task.lastEditedAt).format("YYYY-MM-DD")}
+                  {moment(task.lastEditedAt).format("DD.MM.YYYY")}
                 </td>
               </tr>
               <tr>
@@ -90,13 +90,13 @@ const CRMTaskPage = async (props: TaskPageProps) => {
                 <td className="py-2 px-4 border-b">{task.title}</td>
               </tr>
               <tr>
-                <td className="py-2 px-4 border-b">Content</td>
+                <td className="py-2 px-4 border-b">Содержимое</td>
                 <td className="py-2 px-4 border-b">{task.content}</td>
               </tr>
               <tr>
                 <td className="py-2 px-4 border-b">Assigned to</td>
                 <td className="py-2 px-4 border-b">
-                  {task.assigned_user?.name || "Not assigned"}
+                  {task.assigned_user?.name || "Не назначено"}
                 </td>
               </tr>
             </tbody>

@@ -89,7 +89,7 @@ const CreateProductForm = ({
       <form action={onAction} className="space-y-4">
         <FormInput
           id="name"
-          label="Name"
+          label="Название"
           type="text"
           errors={fieldErrors}
         />
@@ -101,7 +101,7 @@ const CreateProductForm = ({
         />
         <FormSelect
           id="type"
-          label="Type"
+          label="Тип"
           type="hidden"
           data={[
             { id: "PRODUCT", name: "Product" },
@@ -111,7 +111,7 @@ const CreateProductForm = ({
         />
         <FormSelect
           id="status"
-          label="Status"
+          label="Статус"
           type="hidden"
           data={[
             { id: "DRAFT", name: "Draft" },
@@ -190,7 +190,7 @@ const CreateProductForm = ({
         )}
         <FormTextarea
           id="description"
-          label="Description"
+          label="Описание"
           errors={fieldErrors}
         />
         <FormSubmit className="w-full">

@@ -55,7 +55,7 @@ export const columns: ColumnDef<AdminUser>[] = [
   {
     accessorKey: "name",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Name" />
+      <DataTableColumnHeader column={column} title="Название" />
     ),
 
     cell: ({ row }) => <div className="">{row.getValue("name")}</div>,
@@ -91,7 +91,7 @@ export const columns: ColumnDef<AdminUser>[] = [
   {
     accessorKey: "userStatus",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Status" />
+      <DataTableColumnHeader column={column} title="Статус" />
     ),
     cell: ({ row }) => {
       const status = statuses.find(

@@ -48,7 +48,7 @@ export const createColumns = (
   {
     accessorKey: "assigned_to_user",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Assigned to" />
+      <DataTableColumnHeader column={column} title="Назначено на" />
     ),
 
     cell: ({ row }) => (
@@ -56,7 +56,7 @@ export const createColumns = (
         {
           //@ts-ignore
           //TODO: fix this
-          row.getValue("assigned_to_user")?.name ?? "Unassigned"
+          row.getValue("assigned_to_user")?.name ?? "Не назначено"
         }
       </div>
     ),
@@ -74,7 +74,7 @@ export const createColumns = (
         {
           //@ts-ignore
           //TODO: fix this
-          row.getValue("company") ?? "Unassigned"
+          row.getValue("company") ?? "Не назначено"
         }
       </div>
     ),
@@ -84,7 +84,7 @@ export const createColumns = (
   {
     accessorKey: "firstName",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Name" />
+      <DataTableColumnHeader column={column} title="Название" />
     ),
 
     cell: ({ row }) => (
@@ -120,7 +120,7 @@ export const createColumns = (
   {
     accessorKey: "status",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Status" />
+      <DataTableColumnHeader column={column} title="Статус" />
     ),
     cell: ({ row }) => {
       const status = statuses.find(

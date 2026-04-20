@@ -10,54 +10,54 @@ import {
 export const labels = [
   {
     value: "bug",
-    label: "Bug",
+    label: "Баг",
   },
   {
     value: "feature",
-    label: "Feature",
+    label: "Функция",
   },
   {
     value: "documentation",
-    label: "Documentation",
+    label: "Документация",
   },
 ];
 
 export const statuses = [
   {
     value: "ACTIVE",
-    label: "Active",
+    label: "В работе",
     icon: QuestionMarkCircledIcon,
   },
   {
     value: "PENDING",
-    label: "Pending",
+    label: "Ожидает",
     icon: CircleIcon,
   },
   {
     value: "COMPLETE",
-    label: "Complete",
+    label: "Завершено",
     icon: StopwatchIcon,
   },
 ];
 
 export const priorities = [
   {
-    label: "Low",
+    label: "Низкий",
     value: "low",
     icon: ArrowDownIcon,
   },
   {
-    label: "Normal",
+    label: "Средний",
     value: "normal",
     icon: ArrowRightIcon,
   },
   {
-    label: "High",
+    label: "Высокий",
     value: "high",
     icon: ArrowUpIcon,
   },
   {
-    label: "Critical",
+    label: "Критичный",
     value: "critical",
     icon: ArrowUpIcon,
   },

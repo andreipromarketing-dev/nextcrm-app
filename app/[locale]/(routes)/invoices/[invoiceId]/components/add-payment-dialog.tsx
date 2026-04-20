@@ -98,7 +98,7 @@ export function AddPaymentDialog({
             />
           </div>
           <div className="space-y-2">
-            <Label>Date</Label>
+            <Label>Дата</Label>
             <Input
               type="date"
               value={paidAt}

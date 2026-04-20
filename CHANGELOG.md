@@ -32,3 +32,6 @@
 
 ### Added
 - MemPalace MCP Server to OpenCode configuration for persistent memory
+- Complete Russian Frontend Localization (over 130+ hardcoded strings translated to Russian, date formats fixed, system toasts translated).
+- Default Currency is set to RUB, and Stages for Opportunities are natively Russian in the Prisma database.
+- Next.js DEV tools disabled (devIndicators: false).

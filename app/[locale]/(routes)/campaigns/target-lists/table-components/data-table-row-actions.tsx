@@ -68,9 +68,7 @@ export function DataTableRowActions<TData>({
         <DropdownMenuContent align="end" className="w-[160px]">
           <DropdownMenuItem
             onClick={() => router.push(`/crm/target-lists/${targetList?.id}`)}
-          >
-            View
-          </DropdownMenuItem>
+          >Просмотр</DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem onClick={() => setOpen(true)}>
             Delete

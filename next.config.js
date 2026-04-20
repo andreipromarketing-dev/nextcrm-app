@@ -4,6 +4,7 @@ const withNextIntl = require("next-intl/plugin")(
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  devIndicators: false,
   output: "standalone",
   serverExternalPackages: ["pdf-parse", "pdfjs-dist"],
   images: {

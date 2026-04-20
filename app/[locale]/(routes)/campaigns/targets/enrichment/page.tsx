@@ -75,7 +75,7 @@ export default async function TargetEnrichmentJobsPage() {
             <TableHeader>
               <TableRow>
                 <TableHead>Target</TableHead>
-                <TableHead>Status</TableHead>
+                <TableHead>Статус</TableHead>
                 <TableHead>Fields</TableHead>
                 <TableHead>Started</TableHead>
                 <TableHead>By</TableHead>

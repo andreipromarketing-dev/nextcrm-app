@@ -83,7 +83,7 @@ export function DocumentDetailPanel({
           {/* Metadata */}
           <div className="grid grid-cols-2 gap-3 text-sm">
             <div>
-              <span className="text-muted-foreground">Type</span>
+              <span className="text-muted-foreground">Тип</span>
               <div>
                 <Badge variant="outline">{document.document_system_type ?? "OTHER"}</Badge>
               </div>
@@ -97,7 +97,7 @@ export function DocumentDetailPanel({
               <div>{document.createdAt ? moment(document.createdAt).format("MMM D, YYYY") : "—"}</div>
             </div>
             <div>
-              <span className="text-muted-foreground">Account</span>
+              <span className="text-muted-foreground">Компания</span>
               <div>{document.accounts?.[0]?.account?.name ?? "—"}</div>
             </div>
           </div>

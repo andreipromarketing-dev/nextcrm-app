@@ -94,16 +94,27 @@ export function AppSidebar({
     getCrmMenuItem({ localizations: dict.crm }),
     getCampaignsMenuItem({
       localizations: {
-        title: "Campaigns",
-        campaigns: "All Campaigns",
-        templates: "Templates",
-        targets: "Targets",
-        targetLists: "Target Lists",
+        title: dict?.campaigns || "Кампании",
+        campaigns: dict?.campaignsAll || "Все кампании",
+        templates: dict?.campaignsTemplates || "Шаблоны",
+        targets: dict?.campaignsTargets || "Базы контактов",
+        targetLists: dict?.campaignsTargetLists || "Списки рассылок",
       },
     }),
     getProjectsMenuItem({ title: dict?.projects || "Projects" }),
     getEmailsMenuItem({ title: dict?.emails || "Emails" }),
-    getReportsMenuItem({ title: dict?.reports || "Reports" }),
+    getReportsMenuItem({ 
+      title: dict?.reports || "Reports", 
+      reports: {
+        dashboard: dict?.reportsDashboard || "Дашборд",
+        sales: dict?.reportsSales || "Продажи", 
+        leads: dict?.reportsLeads || "Лиды",
+        accounts: dict?.reportsAccounts || "Компании", 
+        activity: dict?.reportsActivity || "Активность", 
+        campaigns: dict?.reportsCampaigns || "Кампании", 
+        users: dict?.reportsUsers || "Пользователи"
+      } 
+    }),
     getDocumentsMenuItem({ title: dict?.documents || "Documents" }),
     getInvoicesMenuItem({ title: dict?.invoices || "Invoices" }),
   ];

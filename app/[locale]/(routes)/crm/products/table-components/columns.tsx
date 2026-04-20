@@ -38,7 +38,7 @@ export const columns: ColumnDef<Product>[] = [
   {
     accessorKey: "name",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Name" />
+      <DataTableColumnHeader column={column} title="Название" />
     ),
     cell: ({ row }) => (
       <Link
@@ -67,7 +67,7 @@ export const columns: ColumnDef<Product>[] = [
   {
     accessorKey: "type",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Type" />
+      <DataTableColumnHeader column={column} title="Тип" />
     ),
     cell: ({ row }) => {
       const type = productTypes.find((t) => t.value === row.getValue("type"));
@@ -86,7 +86,7 @@ export const columns: ColumnDef<Product>[] = [
   {
     accessorKey: "status",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Status" />
+      <DataTableColumnHeader column={column} title="Статус" />
     ),
     cell: ({ row }) => {
       const status = productStatuses.find(

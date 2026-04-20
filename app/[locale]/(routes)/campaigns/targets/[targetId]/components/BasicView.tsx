@@ -147,7 +147,7 @@ export async function BasicView({ data }: TargetBasicViewProps) {
               <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
                 <User className="mt-px h-5 w-5" />
                 <div className="space-y-1">
-                  <p className="text-sm font-medium leading-none">Status</p>
+                  <p className="text-sm font-medium leading-none">Статус</p>
                   <p className="text-sm text-muted-foreground">
                     {data.status ? "Active" : "Inactive"}
                   </p>
@@ -278,7 +278,7 @@ export async function BasicView({ data }: TargetBasicViewProps) {
       {data.target_lists && data.target_lists.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
-            <CardTitle>Target Lists</CardTitle>
+            <CardTitle>Списки рассылок</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-2">

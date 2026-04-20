@@ -54,7 +54,7 @@ const TARGET_FIELDS: TargetField[] = [
   { key: "country",        label: "Country",        required: false },
   { key: "industry",       label: "Industry",       required: false },
   { key: "employees",      label: "Employees",      required: false },
-  { key: "description",    label: "Description",    required: false },
+  { key: "description",    label: "Описание",    required: false },
 ];
 
 const SKIP_VALUE = "__skip__";
@@ -185,7 +185,7 @@ const ImportTargetsModal = () => {
       resetState();
       router.refresh();
     } catch (error: any) {
-      toast.error(error?.message || "Something went wrong");
+      toast.error(error?.message || "Что-то пошло не так");
     } finally {
       setIsLoading(false);
     }
@@ -197,9 +197,7 @@ const ImportTargetsModal = () => {
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
         <Button variant="outline" size="sm">
-          <Upload className="h-4 w-4 mr-2" />
-          Import CSV
-        </Button>
+          <Upload className="h-4 w-4 mr-2" />Импорт CSV</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>

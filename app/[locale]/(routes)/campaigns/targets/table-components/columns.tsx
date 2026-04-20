@@ -99,7 +99,7 @@ export const columns: ColumnDef<Target>[] = [
   {
     accessorKey: "status",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Status" />
+      <DataTableColumnHeader column={column} title="Статус" />
     ),
     cell: ({ row }) => (
       <div className="">{row.original.status ? "Active" : "Inactive"}</div>

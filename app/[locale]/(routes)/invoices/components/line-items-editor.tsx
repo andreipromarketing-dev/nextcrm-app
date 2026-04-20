@@ -112,7 +112,7 @@ export function LineItemsEditor({
     <div className="space-y-3">
       <div className="grid grid-cols-[1fr_2fr_80px_100px_80px_120px_80px_40px] gap-2 text-xs font-medium text-muted-foreground">
         <span>{l.product ?? "Product"}</span>
-        <span>{l.description ?? "Description"}</span>
+        <span>{l.description ?? "Описание"}</span>
         <span>{l.quantity ?? "Qty"}</span>
         <span>{l.unitPrice ?? "Unit Price"}</span>
         <span>{l.discount ?? "Disc %"}</span>
@@ -159,7 +159,7 @@ export function LineItemsEditor({
               onChange={(e) =>
                 updateItem(index, { description: e.target.value })
               }
-              placeholder="Description"
+              placeholder="Описание"
             />
 
             <Input

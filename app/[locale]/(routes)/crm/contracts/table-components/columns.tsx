@@ -66,14 +66,14 @@ export const columns: ColumnDef<Lead>[] = [
   {
     accessorKey: "assigned_to_user",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Assigned to" />
+      <DataTableColumnHeader column={column} title="Назначено на" />
     ),
 
     cell: ({ row }) => (
       <div className="w-[150px]">
         {row.original.assigned_to_user
           ? row.original.assigned_to_user.name
-          : "Unassigned"}
+          : "Не назначено"}
       </div>
     ),
     enableSorting: true,
@@ -89,7 +89,7 @@ export const columns: ColumnDef<Lead>[] = [
       <div className="">
         {row.original.assigned_account
           ? row.original.assigned_account.name
-          : "Unassigned"}
+          : "Не назначено"}
       </div>
     ),
     enableSorting: false,
@@ -98,7 +98,7 @@ export const columns: ColumnDef<Lead>[] = [
   {
     accessorKey: "status",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Status" />
+      <DataTableColumnHeader column={column} title="Статус" />
     ),
     cell: ({ row }) => {
       const status = statuses.find(

@@ -74,7 +74,7 @@ export async function BasicView({ data }: OppsViewProps) {
               <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
                 <CoinsIcon className="mt-px h-5 w-5" />
                 <div className="space-y-1">
-                  <p className="text-sm font-medium leading-none">Account</p>
+                  <p className="text-sm font-medium leading-none">Компания</p>
                   <p className="text-sm text-muted-foreground">
                     {data.assigned_accounts?.name}
                   </p>
@@ -103,9 +103,7 @@ export async function BasicView({ data }: OppsViewProps) {
               <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
                 <CoinsIcon className="mt-px h-5 w-5" />
                 <div className="space-y-1">
-                  <p className="text-sm font-medium leading-none">
-                    Description
-                  </p>
+                  <p className="text-sm font-medium leading-none">Описание</p>
                   <p className="text-sm text-muted-foreground">
                     {data.description ? data.description : "N/A"}
                   </p>
@@ -161,7 +159,7 @@ export async function BasicView({ data }: OppsViewProps) {
               <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
                 <CoinsIcon className="mt-px h-5 w-5" />
                 <div className="space-y-1">
-                  <p className="text-sm font-medium leading-none">Status</p>
+                  <p className="text-sm font-medium leading-none">Статус</p>
                   <p className="text-sm text-muted-foreground">
                     {data.status ? "Active" : "Inactive"}
                   </p>
@@ -170,7 +168,7 @@ export async function BasicView({ data }: OppsViewProps) {
               <div className="-mx-2 flex items-start space-x-4 rounded-md p-2 transition-all hover:bg-accent hover:text-accent-foreground">
                 <CoinsIcon className="mt-px h-5 w-5" />
                 <div className="space-y-1">
-                  <p className="text-sm font-medium leading-none">Type</p>
+                  <p className="text-sm font-medium leading-none">Тип</p>
                   <p className="text-sm text-muted-foreground">{data.contact_type?.name ?? "—"}</p>
                 </div>
               </div>

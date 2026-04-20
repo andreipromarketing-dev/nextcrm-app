@@ -58,7 +58,7 @@ export function Step1Details({ initialData, onNext }: Props) {
         {error && <p className="text-sm text-destructive">{error}</p>}
       </div>
       <div className="flex flex-col gap-1.5">
-        <Label htmlFor="description">Description</Label>
+        <Label htmlFor="description">Описание</Label>
         <Textarea
           id="description"
           value={description}

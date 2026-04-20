@@ -45,7 +45,7 @@ export function AuditAdminTable({
               <th className="px-4 py-2 text-left font-medium">Entity</th>
               <th className="px-4 py-2 text-left font-medium">Action</th>
               <th className="px-4 py-2 text-left font-medium">User</th>
-              <th className="px-4 py-2 text-left font-medium">Date</th>
+              <th className="px-4 py-2 text-left font-medium">Дата</th>
               {role === "admin" && (
                 <th className="px-4 py-2 text-left font-medium">Actions</th>
               )}

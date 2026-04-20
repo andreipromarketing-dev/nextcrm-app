@@ -31,7 +31,7 @@ export const productStatuses = [
   },
   {
     value: "ACTIVE",
-    label: "Active",
+    label: "В работе",
     icon: CheckCircle2Icon,
   },
   {

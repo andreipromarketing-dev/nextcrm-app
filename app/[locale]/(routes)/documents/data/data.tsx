@@ -6,9 +6,9 @@ import {
 } from "@radix-ui/react-icons";
 
 export const labels = [
-  { value: "bug", label: "Bug" },
-  { value: "feature", label: "Feature" },
-  { value: "documentation", label: "Documentation" },
+  { value: "bug", label: "Баг" },
+  { value: "feature", label: "Функция" },
+  { value: "documentation", label: "Документация" },
 ];
 
 export const documentSystemTypes = [
@@ -19,7 +19,7 @@ export const documentSystemTypes = [
 ];
 
 export const processingStatuses = [
-  { value: "PENDING", label: "Pending", icon: CircleIcon },
+  { value: "PENDING", label: "Ожидает", icon: CircleIcon },
   { value: "PROCESSING", label: "Processing", icon: StopwatchIcon },
   { value: "READY", label: "Ready", icon: CheckCircledIcon },
   { value: "FAILED", label: "Failed", icon: CrossCircledIcon },
@@ -28,8 +28,8 @@ export const processingStatuses = [
 // Keep legacy exports for any remaining references
 export const statuses = processingStatuses;
 export const priorities = [
-  { label: "Low", value: "low" },
-  { label: "Normal", value: "normal" },
-  { label: "High", value: "high" },
-  { label: "Critical", value: "critical" },
+  { label: "Низкий", value: "low" },
+  { label: "Средний", value: "normal" },
+  { label: "Высокий", value: "high" },
+  { label: "Критичный", value: "critical" },
 ];

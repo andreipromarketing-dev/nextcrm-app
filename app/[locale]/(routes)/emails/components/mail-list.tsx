@@ -47,7 +47,7 @@ export function MailList({ items, page, totalPages }: MailListProps) {
               <div className="flex items-center">
                 <div className="flex items-center gap-2">
                   <div className="font-semibold">
-                    {item.fromName ?? item.fromEmail ?? "Unknown"}
+                    {item.fromName ?? item.fromEmail ?? "Неизвестно"}
                   </div>
                   {!item.isRead && (
                     <span className="flex h-2 w-2 rounded-full bg-blue-600" />

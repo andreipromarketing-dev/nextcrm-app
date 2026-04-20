@@ -7,7 +7,7 @@ import {
 export const statuses = [
   {
     value: "NEW",
-    label: "New",
+    label: "Новая",
     icon: QuestionMarkCircledIcon,
   },
   {

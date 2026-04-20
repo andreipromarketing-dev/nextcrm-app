@@ -147,9 +147,7 @@ export function LeadDataTable<TData, TValue>({
                     <TableCell
                       colSpan={columns.length}
                       className="h-24 text-center"
-                    >
-                      No results.
-                    </TableCell>
+                    >Нет результатов.</TableCell>
                   </TableRow>
                 )}
               </TableBody>

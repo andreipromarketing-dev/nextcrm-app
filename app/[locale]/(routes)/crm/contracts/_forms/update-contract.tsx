@@ -182,13 +182,13 @@ const UpdateContractForm = ({
           />
           <FormTextarea
             id="description"
-            label="Description"
+            label="Описание"
             errors={fieldErrors}
             defaultValue={data.description}
           />
           <FormSelect
             id="status"
-            label="Status"
+            label="Статус"
             type="hidden"
             data={contractStatuses}
             errors={fieldErrors}
@@ -196,7 +196,7 @@ const UpdateContractForm = ({
           />
           <FormSelect
             id="account"
-            label="Account"
+            label="Компания"
             type="hidden"
             data={accounts}
             errors={fieldErrors}

@@ -82,7 +82,7 @@ const EditLineItemForm = ({
           <form action={onAction} className="space-y-4">
             <FormInput
               id="name"
-              label="Name"
+              label="Название"
               type="text"
               errors={fieldErrors}
               defaultValue={item.name}
@@ -135,7 +135,7 @@ const EditLineItemForm = ({
 
             <FormTextarea
               id="description"
-              label="Description"
+              label="Описание"
               errors={fieldErrors}
               defaultValue={item.description || ""}
             />

@@ -15,6 +15,15 @@ import { NavItem } from "../nav-main"
 
 interface GetReportsMenuItemProps {
   title: string
+  reports: {
+    dashboard: string
+    sales: string
+    leads: string
+    accounts: string
+    activity: string
+    campaigns: string
+    users: string
+  }
 }
 
 /**
@@ -24,18 +33,19 @@ interface GetReportsMenuItemProps {
  */
 export default function getReportsMenuItem({
   title,
+  reports,
 }: GetReportsMenuItemProps): NavItem {
   return {
     title,
     icon: FileBarChart,
     items: [
-      { title: "Dashboard", url: "/reports", exact: true },
-      { title: "Sales", url: "/reports/sales" },
-      { title: "Leads", url: "/reports/leads" },
-      { title: "Accounts", url: "/reports/accounts" },
-      { title: "Activity", url: "/reports/activity" },
-      { title: "Campaigns", url: "/reports/campaigns" },
-      { title: "Users", url: "/reports/users" },
+      { title: reports.dashboard, url: "/reports", exact: true },
+      { title: reports.sales, url: "/reports/sales" },
+      { title: reports.leads, url: "/reports/leads" },
+      { title: reports.accounts, url: "/reports/accounts" },
+      { title: reports.activity, url: "/reports/activity" },
+      { title: reports.campaigns, url: "/reports/campaigns" },
+      { title: reports.users, url: "/reports/users" },
     ],
   }
 }
