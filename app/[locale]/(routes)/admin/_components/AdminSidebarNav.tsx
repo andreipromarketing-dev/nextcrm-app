@@ -2,27 +2,29 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { Key, Users, Settings, SlidersHorizontal, ClipboardList, Coins } from "lucide-react";
 
-const navItems = [
-  { label: "LLM Keys",     href: "/admin/llm-keys",    icon: Key },
-  { label: "Users",        href: "/admin/users",        icon: Users },
-  { label: "Services",     href: "/admin/services",     icon: Settings },
-  { label: "CRM Settings", href: "/admin/crm-settings", icon: SlidersHorizontal },
-  { label: "Audit Log",    href: "/admin/audit-log",    icon: ClipboardList },
-  { label: "Currencies",   href: "/admin/currencies",  icon: Coins },
-];
-
 export function AdminSidebarNav() {
+  const t = useTranslations("AdminPage");
   const pathname = usePathname();
+
+  const navItems = [
+    { labelKey: "llmKeys", href: "/admin/llm-keys", icon: Key },
+    { labelKey: "users", href: "/admin/users", icon: Users },
+    { labelKey: "services", href: "/admin/services", icon: Settings },
+    { labelKey: "crmSettings", href: "/admin/crm-settings", icon: SlidersHorizontal },
+    { labelKey: "auditLog", href: "/admin/audit-log", icon: ClipboardList },
+    { labelKey: "currencies", href: "/admin/currencies", icon: Coins },
+  ];
 
   return (
     <nav className="flex flex-col gap-1">
       <p className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-        Admin
+        {t("title")}
       </p>
-      {navItems.map(({ label, href, icon: Icon }) => {
+      {navItems.map(({ labelKey, href, icon: Icon }) => {
         const isActive = pathname.includes(href);
         return (
           <Link
@@ -36,7 +38,7 @@ export function AdminSidebarNav() {
             )}
           >
             <Icon className="h-4 w-4 shrink-0" />
-            {label}
+            {t(labelKey)}
           </Link>
         );
       })}
