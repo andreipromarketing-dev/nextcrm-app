@@ -40,10 +40,9 @@ const FormSchema = z.object({
 
 export function InviteForm() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const t = useTranslations("AdminPage");
+  const t = useTranslations("AdminPage.inviteForm");
 
   const router = useRouter();
-
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -57,10 +56,10 @@ export function InviteForm() {
       if (result.error) {
         toast.error(result.error);
       } else {
-        toast.success(t("inviteForm.invited"));
+        toast.success(t("invited"));
       }
     } catch (error) {
-      toast.error(t("inviteForm.errorDesc"));
+      toast.error(t("errorDesc"));
     } finally {
       form.reset({
         name: "",
@@ -83,9 +82,9 @@ export function InviteForm() {
           name="name"
           render={({ field }) => (
             <FormItem className="w-1/3">
-              <FormLabel>{t("inviteForm.name")}</FormLabel>
+              <FormLabel>{t("name")}</FormLabel>
               <FormControl>
-                <Input disabled={isLoading} placeholder="jdoe" {...field} />
+                <Input disabled={isLoading} placeholder={t("namePlaceholder")} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -96,11 +95,11 @@ export function InviteForm() {
           name="email"
           render={({ field }) => (
             <FormItem className="w-1/3">
-              <FormLabel>{t("inviteForm.email")}</FormLabel>
+              <FormLabel>{t("email")}</FormLabel>
               <FormControl>
                 <Input
                   disabled={isLoading}
-                  placeholder="name@domain.com"
+                  placeholder={t("emailPlaceholder")}
                   {...field}
                 />
               </FormControl>
@@ -113,16 +112,17 @@ export function InviteForm() {
           name="language"
           render={({ field }) => (
             <FormItem className="w-[250px]">
-              <FormLabel>Language</FormLabel>
+              <FormLabel>{t("language")}</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select a user language" />
+                    <SelectValue placeholder={t("selectLanguage")} />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
                   <SelectItem value="en">English</SelectItem>
-                  <SelectItem value="cz">Czech</SelectItem>
+                  <SelectItem value="cz">Čeština</SelectItem>
+                  <SelectItem value="ru">Русский</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />
@@ -133,7 +133,7 @@ export function InviteForm() {
           {isLoading ? (
             <Icons.spinner className="animate-spin" />
           ) : (
-            "Invite user"
+            t("inviteUser")
           )}
         </Button>
       </form>

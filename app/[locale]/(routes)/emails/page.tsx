@@ -22,7 +22,8 @@ const EmailRoute = async ({
     redirect("/");
   }
 
-  const t = await getTranslations("ModuleMenu");
+  const t = await getTranslations("EmailsPage");
+  const moduleMenuT = await getTranslations("ModuleMenu");
   const params = await searchParams;
 
   const layout = (await cookies()).get("react-resizable-panels:layout");
@@ -56,16 +57,16 @@ const EmailRoute = async ({
 
   if (connectedAccounts.length === 0) {
     return (
-      <Container title={t("emails")} description="Your connected mailboxes">
+      <Container title={t("title")} description={t("description")}>
         <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
           <p className="text-muted-foreground text-sm">
-            You don&apos;t have any mailbox registered yet.
+            {t("noMailbox")}
           </p>
           <Link
             href="/profile"
             className="text-sm font-medium underline underline-offset-4"
           >
-            Go to your profile to set up your first mailbox
+            {t("goToProfile")}
           </Link>
         </div>
       </Container>
@@ -82,8 +83,8 @@ const EmailRoute = async ({
 
   return (
     <Container
-      title={t("emails")}
-      description="Your connected mailboxes"
+      title={t("title")}
+      description={t("description")}
     >
       <Suspense fallback={<EmailsSkeleton />}>
         <MailComponent

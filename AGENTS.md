@@ -2,6 +2,13 @@
 
 This file is the authoritative guide for AI agents (Claude Code and other LLM agents) working in the `nextcrm-app` project. It covers context management, available superpowers/skills, current repo status, and available MCP servers.
 
+**IMPORTANT:** Read SYSTEM_PROMPT.md first for the agency's system prompt and working standards. All output must follow the standards defined there:
+- Interface language: Russian
+- Comments in code: Russian  
+- All user-facing error messages: Russian
+- Code style: Minimal, surgical changes only
+- Response format: Structured with business context
+
 ---
 
 ## 1. Context-Mode

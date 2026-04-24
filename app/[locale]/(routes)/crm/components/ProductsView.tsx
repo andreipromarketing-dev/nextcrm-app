@@ -16,6 +16,7 @@ import CreateProductForm from "../products/_forms/create-product";
 import { ImportProductsDialog } from "../products/components/ImportProductsDialog";
 
 import type { crm_ProductCategories } from "@prisma/client";
+import { useTranslations } from "next-intl";
 
 interface ProductsViewProps {
   data: any[];
@@ -24,13 +25,15 @@ interface ProductsViewProps {
 }
 
 const ProductsView = ({ data, categories, currencies }: ProductsViewProps) => {
+  const t = useTranslations("CrmProducts");
+
   return (
     <Card>
       <CardHeader className="pb-3">
         <div className="flex justify-between">
           <CardTitle>
             <Link href="/crm/products" className="hover:underline">
-              Product Catalog
+              {t("catalogTitle")}
             </Link>
           </CardTitle>
 
@@ -46,7 +49,7 @@ const ProductsView = ({ data, categories, currencies }: ProductsViewProps) => {
       </CardHeader>
       <CardContent>
         {!data || data.length === 0 ? (
-          "No products found. Create your first product to get started."
+          t("noProducts")
         ) : (
           <ProductsDataTable data={data} columns={columns} />
         )}

@@ -67,6 +67,7 @@ export default async function AppLayout({
 
   // Fetch localization dictionary
   const dict = await getTranslations("ModuleMenu");
+  const reportsDict = await getTranslations("ReportsPage");
 
   // Extract translations as plain object for client component
   const translations = {
@@ -85,6 +86,13 @@ export default async function AppLayout({
     projects: dict("projects"),
     emails: dict("emails"),
     reports: dict("reports"),
+    reportsDashboard: reportsDict("menu.dashboard"),
+    reportsSales: reportsDict("menu.sales"),
+    reportsLeads: reportsDict("menu.leads"),
+    reportsAccounts: reportsDict("menu.accounts"),
+    reportsActivity: reportsDict("menu.activity"),
+    reportsCampaigns: reportsDict("menu.campaigns"),
+    reportsUsers: reportsDict("menu.users"),
     documents: dict("documents"),
     invoices: dict("invoices"),
     settings: dict("settings"),

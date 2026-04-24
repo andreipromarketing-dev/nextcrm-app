@@ -2,10 +2,14 @@ import { pauseCampaign } from "@/actions/campaigns/pause-campaign";
 import StepsTimeline from "./StepsTimeline";
 import RecipientsTable from "./RecipientsTable";
 import type { getCampaign } from "@/actions/campaigns/get-campaign";
+import { getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
 type CampaignWithData = NonNullable<Awaited<ReturnType<typeof getCampaign>>>;
 
 export default function CampaignDetail({ campaign }: { campaign: CampaignWithData }) {
+  const t = useTranslations("CampaignDetail");
   const sends = campaign.sends;
   const totalSent = sends.filter((s) => ["sent", "delivered", "bounced"].includes(s.status)).length;
   const delivered = sends.filter((s) => s.status === "delivered").length;
@@ -52,7 +56,7 @@ export default function CampaignDetail({ campaign }: { campaign: CampaignWithDat
               type="submit"
               className="px-3 py-1.5 text-sm border rounded-md hover:bg-muted"
             >
-              Pause
+              {t("pause")}
             </button>
           </form>
         )}
@@ -61,11 +65,11 @@ export default function CampaignDetail({ campaign }: { campaign: CampaignWithDat
       {/* Stats row */}
       <div className="grid grid-cols-5 gap-4">
         {[
-          { label: "Sent", value: totalSent },
-          { label: "Delivered", value: delivered },
-          { label: "Open Rate", value: `${openRate}%` },
-          { label: "Click Rate", value: `${clickRate}%` },
-          { label: "Bounced", value: bounced },
+          { label: t("sent"), value: totalSent },
+          { label: t("delivered"), value: delivered },
+          { label: t("openRate"), value: `${openRate}%` },
+          { label: t("clickRate"), value: `${clickRate}%` },
+          { label: t("bounced"), value: bounced },
         ].map(({ label, value }) => (
           <div key={label} className="bg-muted/30 rounded-lg p-4 text-center">
             <div className="text-2xl font-bold">{value}</div>
@@ -75,10 +79,10 @@ export default function CampaignDetail({ campaign }: { campaign: CampaignWithDat
       </div>
 
       {/* Steps Timeline */}
-      <StepsTimeline steps={campaign.steps} />
+      <StepsTimeline steps={campaign.steps} title={t("steps")} />
 
       {/* Recipients Table */}
-      <RecipientsTable sends={campaign.sends} />
+      <RecipientsTable sends={campaign.sends} title={t("recipients")} />
     </div>
   );
 }

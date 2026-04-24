@@ -1,7 +1,7 @@
 {
   "RootLayout": {
-    "title": "NextCRM",
-    "description": "NextCRM — это CRM с открытым исходным кодом, созданная на основе NextJS."
+    "title": "ЮСС-CRM",
+    "description": "ЮСС-CRM — это CRM с открытым исходным кодом, созданная на основе NextJS."
   },
   "ModuleMenu": {
     "dashboard": "Панель приборов",
@@ -28,7 +28,7 @@
   "DashboardPage": {
     "containerTitle": "Панель приборов",
     "totalRevenue": "Общий доход",
-    "containerDescription": "Добро пожаловать в NextCRM, здесь Вы можете увидеть всю важную информацию о вашем бизнесе.",
+    "containerDescription": "Добро пожаловать в ЮСС-CRM, здесь Вы можете увидеть всю важную информацию о вашем бизнесе.",
     "expectedRevenue": "Ожидаемый доход",
     "activeUsers": "Активные пользователи",
     "accounts": "Компании",
@@ -135,6 +135,179 @@
       "sheetDescription": "Заполните детали для создания нового договора",
       "empty": "Не найдено наз��аченных договоров"
     }
+  },
+  "CrmDashboard": {
+    "title": "Панель продаж",
+    "description": "Управление сделками и с помощью канбан-доски",
+    "inDevelopment": "В разработке. После завершения этого компонента будет оптимистичное обновление данных.",
+    "stageChanged": "Стадия сделки изменена",
+    "somethingWrong": "Что-то пошло не так",
+    "setToInactive": "Сделка переведена в неактивные",
+    "lost": "Проиграно",
+    "newOpportunity": "Новая возможность"
+  },
+  "UserDashboard": {
+    "title": "Моя панель",
+    "description": "Личный обзор CRM",
+    "totalTasks": "Всего задач",
+    "openTasks": "Открытые задачи",
+    "myLeads": "Мои лиды",
+    "activeOpportunities": "Активные возможности",
+    "myTasks": "Мои задачи",
+    "myOpportunities": "Мои возможности",
+    "noTasks": "Нет назначенных задач",
+    "noOpportunities": "Нет назначенных возможностей",
+    "noLeads": "Нет назначенных лидов",
+    "titleCol": "Название",
+    "priorityCol": "Приоритет",
+    "statusCol": "Статус",
+    "nameCol": "Имя",
+    "stageCol": "Стадия",
+    "budgetCol": "Бюджет",
+    "companyCol": "Компания",
+    "emailCol": "Email",
+    "sourceCol": "Источник"
+  },
+  "UserCrmDashboard": {
+    "title": "Панель продаж (в разработке)",
+    "description": "Ваши продажи в одном месте",
+    "callsOverview": "Обзор звонков",
+    "tasksInAccounts": "Задачи в компаниях",
+    "meetingsOverview": "Обзор встреч",
+    "leadsOverview": "Обзор лидов"
+  },
+  "ReportsPage": {
+    "title": "Отчёты",
+    "description": "Анализ данных и метрик",
+    "users": {
+      "title": "Отчёт по пользователям",
+      "description": "Анализ активности и роста пользователей",
+      "totalActive": "Всего активных пользователей"
+    },
+    "sales": {
+      "title": "Отчёт по продажам",
+      "description": "Анализ продаж и доходов",
+      "totalRevenue": "Общий доход",
+      "totalOrders": "Всего заказов",
+      "averageOrderValue": "Средний чек"
+    },
+    "leads": {
+      "title": "Отчёт по лидам",
+      "description": "Анализ генерации и конверсии лидов",
+      "totalLeads": "Всего лидов",
+      "conversionRate": "Конверсия в сделки",
+      "leadSources": "Источники лидов"
+    },
+    "campaigns": {
+      "title": "Отчёт по кампаниям",
+      "description": "Анализ email-рассылок",
+      "totalSent": "Всего отправлено",
+      "openRate": "Процент открытий",
+      "clickRate": "Процент кликов",
+      "bounceRate": "Процент отказов"
+    },
+    "activity": {
+      "title": "Отчёт по активности",
+      "description": "Анализ действий пользователей в системе",
+      "logins": "Входы в систему",
+      "actionsPerformed": "Выполненных действий",
+      "peakHours": "Пиковые часы активности"
+    },
+    "accounts": {
+      "title": "Отчёт по компаниям",
+      "description": "Анализ клиентской базы",
+      "totalAccounts": "Всего компаний",
+      "activeAccounts": "Активных компаний",
+      "accountsByIndustry": "По отраслям"
+    },
+    "filters": "Фильтры",
+    "apply": "Применить",
+    "reset": "Сбросить",
+    "export": "Экспорт",
+    "noData": "Нет данных для отображения"
+  },
+  "CrmProducts": {
+    "title": "Продукты",
+    "description": "Управление каталогом продуктов и услуг",
+    "catalogTitle": "Каталог продуктов",
+    "noProducts": "Продукты не найдены. Создайте первый продукт, чтобы начать.",
+    "filterProducts": "Фильтр продуктов..."
+  },
+"FulltextSearch": {
+    "placeholder": "Поиск...",
+    "button": "Поиск"
+  },
+  "Sidebar": {
+    "toggle": "Переключить сайдбар"
+  },
+  "Theme": {
+    "toggle": "Переключить тему",
+    "light": "Светлая",
+    "dark": "Тёмная",
+    "system": "Системная"
+  },
+  "Header": {
+    "feedback": "Обратная связь"
+  },
+  "CampaignsPage": {
+    "title": "Кампании",
+    "description": "Управление вашими email-кампаниями",
+    "newCampaign": "+ Новая кампания"
+  },
+  "CampaignsView": {
+    "allCampaigns": "Все кампании",
+    "filterByName": "Фильтр по имени...",
+    "status": "Статус",
+    "allStatuses": "Все статусы",
+    "draft": "Черновик",
+    "scheduled": "Запланировано",
+    "sending": "Отправляется",
+    "sent": "Отправлено",
+    "paused": "Приостановлено",
+    "recipients": "Получатели",
+    "template": "Шаблон",
+    "actions": "Действия",
+    "view": "Просмотр",
+    "delete": "Удалить",
+    "noCampaigns": "Кампании не найдены.",
+    "rowsSelected": "строк(и) выбрано",
+    "rowsPerPage": "Строк на страницу",
+    "page": "Страница",
+    "of": "из",
+    "goToFirstPage": "Перейти на первую страницу",
+    "goToPreviousPage": "Перейти на предыдущую страницу",
+    "goToNextPage": "Перейти на следующую страницу",
+    "goToLastPage": "Перейти на последнюю страницу",
+    "campaignDeleted": "Кампания удалена",
+    "name": "Название",
+    "scheduledAt": "Дата планирования",
+    "reset": "Сбросить",
+    "openMenu": "Открыть меню",
+    "closeMenu": "Закрыть меню"
+  },
+  "CampaignDetail": {
+    "detail": "Детали кампании",
+    "paused": "Приостановлено",
+    "openRate": "Процент открытий",
+    "clickRate": "Процент кликов",
+    "sent": "Отправлено",
+    "delivered": "Доставлено",
+    "bounced": "Отклонено",
+    "pause": "Приостановить",
+    "steps": "Этапы",
+    "recipients": "Получатели"
+  },
+  "Sidebar": {
+    "toggle": "Переключить сайдбар"
+  },
+  "Theme": {
+    "toggle": "Переключить тему",
+    "light": "Светлая",
+    "dark": "Тёмная",
+    "system": "Системная"
+  },
+  "Header": {
+    "feedback": "Обратная связь"
   },
   "CrmAccountForm": {
     "accountName": "Название компании",
@@ -334,10 +507,44 @@
     "setupDescription": "Настройте вашу CRM-систему",
     "usersAdmin": "Пользователи",
     "modulesAdmin": "Модули",
-    "users": {
+    "llmKeys": "Ключи LLM",
+    "users": "Пользователи",
+    "services": "Сервисы",
+    "crmSettings": "Настройки CRM",
+    "auditLog": "Журнал аудита",
+    "currencies": "Валюты",
+    "usersPage": {
       "title": "Пользователи",
       "description": "Управляйте пользователями вашей CRM",
-      "inviteHeading": "Пригласить нового пользователя"
+      "inviteHeading": "Пригласить нового пользователя",
+      "filterPlaceholder": "Фильтровать пользователей...",
+      "searchPlaceholder": "Поиск...",
+      "reset": "Сбросить",
+      "inviteUser": "Пригласить пользователя",
+      "selectUserLanguage": "Выберите язык пользователя",
+      "openMenu": "Открыть меню",
+      "status": "Статус",
+      "role": "Роль"
+    },
+    "columns": {
+      "dateCreated": "Дата создания",
+      "lastLogin": "Последний вход",
+      "name": "Имя",
+      "email": "Электронная почта",
+      "role": "Роль",
+      "status": "Статус",
+      "language": "Язык",
+      "active": "Активен",
+      "inactive": "Неактивен"
+    },
+    "pagination": {
+      "rowsSelected": "выбрано строк(и) из",
+      "rowsPerPage": "Строк на страницу",
+      "pageOf": "Страница {current} из {total}",
+      "goToFirstPage": "Перейти на первую страницу",
+      "goToPreviousPage": "Перейти на предыдущую страницу",
+      "goToNextPage": "Перейти на следующую страницу",
+      "goToLastPage": "Перейти на последнюю страницу"
     },
     "modules": {
       "title": "Модули",
@@ -345,7 +552,12 @@
     },
     "inviteForm": {
       "name": "Имя",
+      "namePlaceholder": "Иван Иванов",
       "email": "Электронная почта",
+      "emailPlaceholder": "email@domain.com",
+      "language": "Язык",
+      "selectLanguage": "Выберите язык пользователя",
+      "inviteUser": "Пригласить пользователя",
       "success": "Успех",
       "invited": "Пользователь успешно приглашён",
       "error": "Ошибка",
@@ -360,6 +572,14 @@
       "sendButton": "Отправить",
       "sent": "Письмо успешно отправлено"
     }
+  },
+  "Common": {
+    "toggleSidebar": "Переключить боковую панель",
+    "search": "Поиск",
+    "searchSomething": "Искать что-то...",
+    "feedback": "Отзыв",
+    "toggleTheme": "Переключить тему",
+    "view": "Вид"
   },
   "ProjectsPage": {
     "title": "Проекты",
@@ -440,6 +660,18 @@
       "watchError": "Ошибка обновления статуса наблюдения"
     }
   },
+  "EmailsPage": {
+    "title": "Электронные письма",
+    "description": "Ваши подключённые почтовые ящики",
+    "noMailbox": "У вас ещё нет зарегистрированных почтовых ящиков.",
+    "goToProfile": "Перейдите в профиль, чтобы настроить первый почтовый ящик",
+    "inbox": "Входящие",
+    "sent": "Отправленные",
+    "allMail": "Все письма",
+    "unread": "Непрочитанные",
+    "search": "Поиск...",
+    "compose": "Написать"
+  },
   "DocumentsPage": {
     "title": "Документы",
     "description": "Управляйте своими документами",
@@ -451,6 +683,10 @@
       "reset": "Сбросить"
     }
   },
+  "DataboxPage": {
+    "title": "Датабокс",
+    "description": "Всё, что вам нужно знать о Датабокс (Datové schránky)"
+  },
   "EmployeesPage": {
     "title": "Сотрудники",
     "description": "Управляйте своими сотрудниками",
@@ -458,7 +694,23 @@
   },
   "ReportsPage": {
     "title": "Отчёты",
-    "description": "Просмотреть бизнес-отчёты",
+    "description": "Просмотр бизнес-отчётов",
+    "menu": {
+      "dashboard": "Обзор",
+      "sales": "Продажи",
+      "leads": "Лиды",
+      "accounts": "Компании",
+      "activity": "Активность",
+      "campaigns": "Кампании",
+      "users": "Пользователи"
+    },
+    "dashboard": "Обзор",
+    "sales": "Продажи",
+    "leads": "Лиды",
+    "accounts": "Компании",
+    "activity": "Активность",
+    "campaigns": "Кампании",
+    "users": "Пользователи",
     "newUsersByMonthOverallTitle": "Новые пользователи за месяц (всего)",
     "newUsersByMonthOverallChart": "Новые пользователи за месяц всего",
     "newUsersByMonth2023Title": "Новые пользователи за месяц (2023)",
@@ -467,156 +719,156 @@
     "newTasksByMonth2023": "Новые задачи за месяц (2023)",
     "oppsBySalesStage": "Возможности по стадии продажи",
     "newOppsByMonth2023": "Новые возможности за месяц (2023)",
-    "last7Days": "Last 7 days",
-    "last30Days": "Last 30 days",
-    "last90Days": "Last 90 days",
-    "yearToDate": "Year to date",
-    "allTime": "All time",
-    "customRange": "Custom",
-    "from": "From",
-    "to": "To",
-    "filters": "Filters",
-    "all": "All",
-    "salesTitle": "Sales Reports",
-    "salesDescription": "Revenue, pipeline, and deal analytics",
-    "leadsTitle": "Leads & Contacts Reports",
-    "leadsDescription": "Lead generation and contact analytics",
-    "accountsTitle": "Accounts Reports",
-    "accountsDescription": "Account growth and segmentation",
-    "activityTitle": "Activity Reports",
-    "activityDescription": "Tasks and activities analytics",
-    "campaignsTitle": "Campaigns Reports",
-    "campaignsDescription": "Email campaign performance analytics",
-    "usersTitle": "Users Reports",
-    "usersDescription": "User growth and activity analytics",
+    "last7Days": "Последние 7 дней",
+    "last30Days": "Последние 30 дней",
+    "last90Days": "Последние 90 дней",
+    "yearToDate": "С начала года",
+    "allTime": "За всё время",
+    "customRange": "Другой период",
+    "from": "От",
+    "to": "До",
+    "filters": "Фильтры",
+    "all": "Все",
+    "salesTitle": "Отчёты по продажам",
+    "salesDescription": "Доход, воронка и аналитика сделок",
+    "leadsTitle": "Отчёты по лидам и контактам",
+    "leadsDescription": "Генерация лидов и аналитика контактов",
+    "accountsTitle": "Отчёты по компаниям",
+    "accountsDescription": "Рост и сегментация компаний",
+    "activityTitle": "Отчёты по активности",
+    "activityDescription": "Аналитика задач и активностей",
+    "campaignsTitle": "Отчёты по кампаниям",
+    "campaignsDescription": "Аналитика эффективности email-рассылок",
+    "usersTitle": "Отчёты по пользователям",
+    "usersDescription": "Рост и активность пользователей",
     "sales": {
-      "title": "Sales Reports",
-      "description": "Revenue, pipeline, and deal analytics",
-      "revenue": "Total Revenue",
-      "pipeline": "Pipeline Value",
-      "avgDeal": "Average Deal Size",
-      "winRate": "Win Rate",
-      "cycleLength": "Avg. Sales Cycle",
-      "days": "days"
+      "title": "Отчёты по продажам",
+      "description": "Доход, воронка и аналитика сделок",
+      "revenue": "Общий доход",
+      "pipeline": "Стоимость воронки",
+      "avgDeal": "Средний чек",
+      "winRate": "Процент побед",
+      "cycleLength": "Средний цикл продаж",
+      "days": "дней"
     },
     "leads": {
-      "title": "Leads & Contacts Reports",
-      "description": "Lead generation and contact analytics",
-      "conversionRate": "Conversion Rate",
-      "converted": "converted"
+      "title": "Отчёты по лидам и контактам",
+      "description": "Генерация лидов и аналитика контактов",
+      "conversionRate": "Конверсия",
+      "converted": "конвертировано"
     },
     "accounts": {
-      "title": "Accounts Reports",
-      "description": "Account growth and segmentation"
+      "title": "Отчёты по компаниям",
+      "description": "Рост и сегментация компаний"
     },
     "activity": {
-      "title": "Activity Reports",
-      "description": "Tasks and activities analytics",
-      "overdueTasks": "Overdue Tasks"
+      "title": "Отчёты по активности",
+      "description": "Аналитика задач и активностей",
+      "overdueTasks": "Просроченные задачи"
     },
     "campaigns": {
-      "title": "Campaigns Reports",
-      "description": "Email campaign performance analytics",
-      "sent": "Emails Sent",
-      "openRate": "Open Rate",
-      "clickRate": "Click Rate"
+      "title": "Отчёты по кампаниям",
+      "description": "Аналитика эффективности email-рассылок",
+      "sent": "Отправлено писем",
+      "openRate": "Процент открытий",
+      "clickRate": "Процент кликов"
     },
     "users": {
-      "title": "Users Reports",
-      "description": "User growth and activity analytics",
-      "totalActive": "Total Active Users"
+      "title": "Отчёты по пользователям",
+      "description": "Рост и активность пользователей",
+      "totalActive": "Всего активных пользователей"
     },
     "kpi": {
-      "totalRevenue": "Total Revenue",
-      "pipelineValue": "Pipeline Value",
-      "newLeads": "New Leads",
-      "conversionRate": "Conversion Rate",
-      "newContacts": "New Contacts",
-      "activeUsers": "Active Users",
-      "openTasks": "Open Tasks",
-      "campaignsSent": "Campaigns Sent",
-      "newAccounts": "New Accounts",
-      "contractsExpiring": "Contracts Expiring"
+      "totalRevenue": "Общий доход",
+      "pipelineValue": "Стоимость воронки",
+      "newLeads": "Новые лиды",
+      "conversionRate": "Конверсия",
+      "newContacts": "Новые контакты",
+      "activeUsers": "Активные пользователи",
+      "openTasks": "Открытые задачи",
+      "campaignsSent": "Отправлено кампаний",
+      "newAccounts": "Новые компании",
+      "contractsExpiring": "Истекающие договоры"
     },
     "charts": {
-      "noData": "No data for this period",
-      "totalRevenue": "Total Revenue",
-      "pipelineValue": "Pipeline Value",
-      "avgDealSize": "Average Deal Size",
-      "winRate": "Win Rate",
-      "salesCycleLength": "Avg. Sales Cycle",
-      "oppsBySalesStage": "Opportunities by Sales Stage",
-      "oppsByMonth": "Opportunities by Month",
-      "newLeadsByMonth": "New Leads by Month",
-      "leadSources": "Lead Sources",
-      "conversionRate": "Lead to Opportunity Conversion",
-      "newContactsByMonth": "New Contacts by Month",
-      "contactsByAccount": "Contacts by Account",
-      "newAccountsByMonth": "New Accounts by Month",
-      "accountsByIndustry": "Accounts by Industry",
-      "topAccountsByRevenue": "Top Accounts by Revenue",
-      "accountsBySize": "Accounts by Size",
-      "overdueTasks": "Overdue Tasks",
-      "tasksCreatedCompleted": "Tasks Created vs Completed",
-      "tasksByAssignee": "Tasks by Assignee",
-      "activitiesByType": "Activities by Type",
-      "emailsSent": "Emails Sent",
-      "openRate": "Open Rate",
-      "clickRate": "Click Rate",
-      "campaignROI": "Campaign Sends",
-      "topTemplates": "Top Templates",
-      "targetListGrowth": "Target List Growth",
-      "totalActiveUsers": "Total Active Users",
-      "activeUsersByYear": "Active Users by Year",
-      "userGrowth": "User Growth",
-      "usersByRole": "Users by Role",
-      "oppsByStage": "Opportunities by Sales Stage",
-      "newLeads": "New Leads by Month",
-      "newContacts": "New Contacts by Month",
-      "newAccounts": "New Accounts by Month",
-      "byIndustry": "Accounts by Industry",
-      "topByRevenue": "Top Accounts by Revenue",
-      "bySize": "Accounts by Size",
-      "targetGrowth": "Target List Growth",
-      "activeByYear": "Active Users by Year",
-      "name": "Name",
-      "value": "Value"
+      "noData": "Нет данных за этот период",
+      "totalRevenue": "Общий доход",
+      "pipelineValue": "Стоимость воронки",
+      "avgDealSize": "Средний чек",
+      "winRate": "Процент побед",
+      "salesCycleLength": "Средний цикл продаж",
+      "oppsBySalesStage": "Возможности по стадии",
+      "oppsByMonth": "Возможности по месяцам",
+      "newLeadsByMonth": "Новые лиды по месяцам",
+      "leadSources": "Источники лидов",
+      "conversionRate": "Конверсия лидов в сделки",
+      "newContactsByMonth": "Новые контакты по месяцам",
+      "contactsByAccount": "Контакты по компаниям",
+      "newAccountsByMonth": "Новые компании по месяцам",
+      "accountsByIndustry": "Компании по отраслям",
+      "topAccountsByRevenue": "Топ компаний по доходу",
+      "accountsBySize": "Компании по размеру",
+      "overdueTasks": "Просроченные задачи",
+      "tasksCreatedCompleted": "Задачи создано vs выполнено",
+      "tasksByAssignee": "Задачи по исполнителю",
+      "activitiesByType": "Активности по типу",
+      "emailsSent": "Отправлено писем",
+      "openRate": "Процент открытий",
+      "clickRate": "Процент кликов",
+      "campaignROI": "Отправки кампаний",
+      "topTemplates": "Топ шаблонов",
+      "targetListGrowth": "Рост списков целей",
+      "totalActiveUsers": "Всего активных пользователей",
+      "activeUsersByYear": "Активные по годам",
+      "userGrowth": "Рост пользователей",
+      "usersByRole": "Пользователи по ролям",
+      "oppsByStage": "Возможности по стадиям",
+      "newLeads": "Новые лиды по месяцам",
+      "newContacts": "Новые контакты по месяцам",
+      "newAccounts": "Новые компании по месяцам",
+      "byIndustry": "Компании по отраслям",
+      "topByRevenue": "Топ по доходу",
+      "bySize": "Компании по размеру",
+      "targetGrowth": "Рост целевых списков",
+      "activeByYear": "Активные по годам",
+      "name": "Название",
+      "value": "Значение"
     },
     "toolbar": {
-      "exportCSV": "Export CSV",
-      "exportPDF": "Export PDF",
-      "saveConfig": "Save",
-      "schedule": "Schedule"
+      "exportCSV": "Экспорт CSV",
+      "exportPDF": "Экспорт PDF",
+      "saveConfig": "Сохранить",
+      "schedule": "Расписание"
     },
     "saveDialog": {
-      "title": "Save Report Configuration",
-      "nameLabel": "Report Name",
-      "namePlaceholder": "e.g. Q1 Sales Pipeline",
-      "shareLabel": "Share with team",
-      "cancel": "Cancel",
-      "save": "Save"
+      "title": "Сохранение конфигурации отчёта",
+      "nameLabel": "Название отчёта",
+      "namePlaceholder": "напр. Продажи Q1",
+      "shareLabel": "Поделиться с командой",
+      "cancel": "Отмена",
+      "save": "Сохранить"
     },
     "scheduleDialog": {
-      "title": "Schedule Report",
-      "savedReport": "Saved Report",
-      "selectReport": "Select a saved report...",
-      "frequency": "Frequency",
-      "daily": "Daily (9am)",
-      "weeklyMon": "Weekly (Monday)",
-      "weeklyFri": "Weekly (Friday)",
-      "monthly": "Monthly (1st)",
-      "custom": "Custom (cron)",
-      "cronExpression": "Cron Expression",
-      "recipients": "Recipients",
+      "title": "Расписание отчётов",
+      "savedReport": "Сохранённый отчёт",
+      "selectReport": "Выберите сохранённый отчёт...",
+      "frequency": "Частота",
+      "daily": "Ежедневно (9:00)",
+      "weeklyMon": "Еженедельно (понедельник)",
+      "weeklyFri": "Еженедельно (пятница)",
+      "monthly": "Ежемесячно (1-го)",
+      "custom": "Другое (cron)",
+      "cronExpression": "Cron выражение",
+      "recipients": "Получатели",
       "recipientsPlaceholder": "email1@example.com, email2@example.com",
-      "format": "Format",
-      "both": "Both (CSV + PDF)",
-      "cancel": "Cancel",
-      "create": "Create Schedule"
+      "format": "Формат",
+      "both": "Оба (CSV + PDF)",
+      "cancel": "Отмена",
+      "create": "Создать расписание"
     },
     "savedReports": {
-      "placeholder": "Saved reports...",
-      "shared": "shared"
+      "placeholder": "Сохранённые отчёты...",
+      "shared": "общий"
     }
   },
   "CommandComponent": {

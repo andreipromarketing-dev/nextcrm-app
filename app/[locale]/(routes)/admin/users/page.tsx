@@ -5,10 +5,8 @@ import { InviteForm } from "./components/IviteForm";
 import { Separator } from "@/components/ui/separator";
 
 import { getSession } from "@/lib/auth-server";
-import { AdminUserDataTable } from "./table-components/data-table";
-import { columns } from "./table-components/columns";
+import { AdminUsersTable } from "./components/AdminUsersTable";
 import { Users } from "@prisma/client";
-import { Button } from "@/components/ui/button";
 import SendMailToAll from "./components/send-mail-to-all";
 import { getTranslations } from "next-intl/server";
 
@@ -33,12 +31,12 @@ const AdminUsersPage = async () => {
 
   return (
     <Container
-      title={t("users.title")}
-      description={t("users.description")}
+      title={t("usersPage.title")}
+      description={t("usersPage.description")}
     >
       <div className="flex-col1">
         <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-          {t("users.inviteHeading")}
+          {t("usersPage.inviteHeading")}
         </h4>
         <InviteForm />
       </div>
@@ -48,7 +46,7 @@ const AdminUsersPage = async () => {
       </div>
       <Separator />
 
-      <AdminUserDataTable columns={columns} data={users} />
+      <AdminUsersTable data={users} />
     </Container>
   );
 };

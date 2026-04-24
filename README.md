@@ -1,5 +1,5 @@
 <a href="https://nextcrm.app/">
-  <h1 align="center">NextCRM</h1>
+  <h1 align="center">ЮСС-CRM</h1>
 </a>
 
 <p align="center">
@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-NextCRM is an open-source CRM built with Next.js 16, React 19, TypeScript, PostgreSQL (Prisma 7), and shadcn/ui. Features CRM, project management, invoicing, document storage, email client, AI-powered features, vector search, and MCP server for AI agent access.
+<a href="https://югспецсети.рф">ЮСС-CRM</a> — открытая CRM от <a href="https://югспецсети.рф">ЮгСпецСети.рф</a>, построенная на Next.js 16, React 19, TypeScript, PostgreSQL (Prisma 7) и shadcn/ui. Features CRM, project management, invoicing, document storage, email client, AI-powered features, vector search, and MCP server for AI agent access.
 </p>
 
 <p align="center">

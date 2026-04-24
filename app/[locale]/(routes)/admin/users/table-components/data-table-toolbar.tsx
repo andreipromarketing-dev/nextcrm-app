@@ -2,6 +2,7 @@
 
 import { Cross2Icon } from "@radix-ui/react-icons";
 import { Table } from "@tanstack/react-table";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,13 +18,15 @@ interface DataTableToolbarProps<TData> {
 export function DataTableToolbar<TData>({
   table,
 }: DataTableToolbarProps<TData>) {
+  const t = useTranslations("AdminPage.usersPage");
+
   const isFiltered = table.getState().columnFilters.length > 0;
 
   return (
     <div className="flex items-center justify-between">
       <div className="flex flex-1 items-center space-x-2">
         <Input
-          placeholder="Filter Users ..."
+          placeholder={t("filterPlaceholder")}
           value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
             table.getColumn("name")?.setFilterValue(event.target.value)
@@ -34,14 +37,14 @@ export function DataTableToolbar<TData>({
         {table.getColumn("userStatus") && (
           <DataTableFacetedFilter
             column={table.getColumn("userStatus")}
-            title="Status"
+            title={t("status")}
             options={statuses}
           />
         )}
         {table.getColumn("role") && (
           <DataTableFacetedFilter
             column={table.getColumn("role")}
-            title="Role"
+            title={t("role")}
             options={roles}
           />
         )}
@@ -51,7 +54,7 @@ export function DataTableToolbar<TData>({
             onClick={() => table.resetColumnFilters()}
             className="h-8 px-2 lg:px-3"
           >
-            Reset
+            {t("reset")}
             <Cross2Icon className="ml-2 h-4 w-4" />
           </Button>
         )}

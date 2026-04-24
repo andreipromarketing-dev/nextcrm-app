@@ -21,9 +21,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { getTranslations } from "next-intl/server";
 
 const UserDashboardPage = async () => {
   const session = await getSession();
+  const t = await getTranslations("UserDashboard");
 
   if (!session) {
     redirect("/auth/signin");
@@ -43,15 +45,15 @@ const UserDashboardPage = async () => {
 
   return (
     <Container
-      title={`${session.user.name} — My Dashboard`}
-      description="Your personal CRM overview"
+      title={`${session.user.name} — ${t("title")}`}
+      description={t("description")}
     >
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-muted-foreground">
-              Total Tasks
+              {t("totalTasks")}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -61,7 +63,7 @@ const UserDashboardPage = async () => {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-muted-foreground">
-              Open Tasks
+              {t("openTasks")}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -71,7 +73,7 @@ const UserDashboardPage = async () => {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-muted-foreground">
-              My Leads
+              {t("myLeads")}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -81,7 +83,7 @@ const UserDashboardPage = async () => {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-muted-foreground">
-              Active Opportunities
+              {t("activeOpportunities")}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -96,20 +98,20 @@ const UserDashboardPage = async () => {
         {/* Tasks */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">My Tasks</CardTitle>
+            <CardTitle className="text-base">{t("myTasks")}</CardTitle>
           </CardHeader>
           <CardContent className="p-0">
             {tasks.length === 0 ? (
               <p className="text-sm text-muted-foreground px-6 pb-4">
-                No tasks assigned.
+                {t("noTasks")}
               </p>
             ) : (
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Title</TableHead>
-                    <TableHead>Priority</TableHead>
-                    <TableHead>Status</TableHead>
+                    <TableHead>{t("titleCol")}</TableHead>
+                    <TableHead>{t("priorityCol")}</TableHead>
+                    <TableHead>{t("statusCol")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -156,20 +158,20 @@ const UserDashboardPage = async () => {
         {/* Opportunities */}
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">My Opportunities</CardTitle>
+            <CardTitle className="text-base">{t("myOpportunities")}</CardTitle>
           </CardHeader>
           <CardContent className="p-0">
             {opportunities.length === 0 ? (
               <p className="text-sm text-muted-foreground px-6 pb-4">
-                No opportunities assigned.
+                {t("noOpportunities")}
               </p>
             ) : (
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Name</TableHead>
-                    <TableHead>Stage</TableHead>
-                    <TableHead>Budget</TableHead>
+                    <TableHead>{t("nameCol")}</TableHead>
+                    <TableHead>{t("stageCol")}</TableHead>
+                    <TableHead>{t("budgetCol")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -200,22 +202,22 @@ const UserDashboardPage = async () => {
         {/* Leads */}
         <Card className="md:col-span-2">
           <CardHeader>
-            <CardTitle className="text-base">My Leads</CardTitle>
+            <CardTitle className="text-base">{t("myLeads")}</CardTitle>
           </CardHeader>
           <CardContent className="p-0">
             {leads.length === 0 ? (
               <p className="text-sm text-muted-foreground px-6 pb-4">
-                No leads assigned.
+                {t("noLeads")}
               </p>
             ) : (
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead>Name</TableHead>
-                    <TableHead>Company</TableHead>
-                    <TableHead>Email</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead>Source</TableHead>
+                    <TableHead>{t("nameCol")}</TableHead>
+                    <TableHead>{t("companyCol")}</TableHead>
+                    <TableHead>{t("emailCol")}</TableHead>
+                    <TableHead>{t("statusCol")}</TableHead>
+                    <TableHead>{t("sourceCol")}</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>

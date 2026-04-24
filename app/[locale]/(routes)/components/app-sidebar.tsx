@@ -103,7 +103,18 @@ export function AppSidebar({
     }),
     getProjectsMenuItem({ title: dict?.projects || "Projects" }),
     getEmailsMenuItem({ title: dict?.emails || "Emails" }),
-    getReportsMenuItem({ title: dict?.reports || "Reports" }),
+    getReportsMenuItem({ 
+      title: dict?.reports || "Reports",
+      localizations: {
+        dashboard: dict?.reportsDashboard || "Dashboard",
+        sales: dict?.reportsSales || "Sales",
+        leads: dict?.reportsLeads || "Leads",
+        accounts: dict?.reportsAccounts || "Accounts",
+        activity: dict?.reportsActivity || "Activity",
+        campaigns: dict?.reportsCampaigns || "Campaigns",
+        users: dict?.reportsUsers || "Users",
+      },
+    }),
     getDocumentsMenuItem({ title: dict?.documents || "Documents" }),
     getInvoicesMenuItem({ title: dict?.invoices || "Invoices" }),
   ];
@@ -150,7 +161,7 @@ export function AppSidebar({
               !isExpanded ? "w-0 opacity-0" : "w-auto opacity-100",
             )}
           >
-            {process.env.NEXT_PUBLIC_APP_NAME || "NextCRM"}
+            {process.env.NEXT_PUBLIC_APP_NAME || "ЮСС-CRM"}
           </h1>
         </div>
       </SidebarHeader>

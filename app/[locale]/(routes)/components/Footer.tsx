@@ -11,7 +11,7 @@ const Footer = async () => {
       <div className="hidden md:flex pr-5">
         <Link href="/">
           <h1 className="text-muted-foreground hover:text-foreground transition-colors">
-            {process.env.NEXT_PUBLIC_APP_NAME} - v{version}
+            {process.env.NEXT_PUBLIC_APP_NAME || "ЮСС-CRM"} - v{version}
           </h1>
         </Link>
       </div>

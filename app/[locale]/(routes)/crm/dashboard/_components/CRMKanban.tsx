@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { format } from "date-fns";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { ThumbsDown } from "lucide-react";
 import {
   DndContext,
@@ -201,6 +202,7 @@ const CRMKanban = ({
   crmData,
 }: CRMKanbanProps) => {
   const router = useRouter();
+  const t = useTranslations("CrmDashboard");
 
   const [selectedStage, setSelectedStage] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -338,11 +340,11 @@ const CRMKanban = ({
         columnsRef.current = initColumns(data, salesStages);
         setColumns(initColumns(data, salesStages));
       } else {
-        toast.success("Opportunity stage changed");
+        toast.success(t("stageChanged"));
       }
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong");
+      toast.error(t("somethingWrong"));
       columnsRef.current = initColumns(data, salesStages);
       setColumns(initColumns(data, salesStages));
     }
@@ -351,7 +353,7 @@ const CRMKanban = ({
   const onThumbsDown = async (opportunityId: string) => {
     try {
       await setInactiveOpportunity(opportunityId);
-      toast.success("Opportunity has been set to inactive");
+      toast.success(t("setToInactive"));
     } catch (error) {
       console.log(error);
     } finally {
@@ -429,7 +431,7 @@ const CRMKanban = ({
           {/* Lost Opportunities Column */}
           <Card className="mx-1 w-full min-w-[300px] overflow-hidden pb-10">
             <CardTitle className="flex gap-2 p-3 justify-between">
-              <span className="text-sm font-bold">Lost</span>
+              <span className="text-sm font-bold">{t("lost")}</span>
             </CardTitle>
             <CardContent className="w-full h-full overflow-y-scroll space-y-2">
               {lostOpportunities.map((opportunity: any, index: number) => (

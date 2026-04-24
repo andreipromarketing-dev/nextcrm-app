@@ -6,15 +6,19 @@ import { NavItem } from "../nav-main"
  *
  * Converted from Link pattern to NavItem structure for sidebar integration.
  * Used in app-sidebar.tsx with module filtering (name === "reports").
- *
- * References:
- * - Previous: Simple Link component with FileBarChart icon
- * - ModuleMenu.tsx: lines 96-100
- * - Route: /reports
  */
 
 interface GetReportsMenuItemProps {
   title: string
+  localizations: {
+    dashboard: string
+    sales: string
+    leads: string
+    accounts: string
+    activity: string
+    campaigns: string
+    users: string
+  }
 }
 
 /**
@@ -24,18 +28,19 @@ interface GetReportsMenuItemProps {
  */
 export default function getReportsMenuItem({
   title,
+  localizations,
 }: GetReportsMenuItemProps): NavItem {
   return {
     title,
     icon: FileBarChart,
     items: [
-      { title: "Dashboard", url: "/reports", exact: true },
-      { title: "Sales", url: "/reports/sales" },
-      { title: "Leads", url: "/reports/leads" },
-      { title: "Accounts", url: "/reports/accounts" },
-      { title: "Activity", url: "/reports/activity" },
-      { title: "Campaigns", url: "/reports/campaigns" },
-      { title: "Users", url: "/reports/users" },
+      { title: localizations.dashboard, url: "/reports", exact: true },
+      { title: localizations.sales, url: "/reports/sales" },
+      { title: localizations.leads, url: "/reports/leads" },
+      { title: localizations.accounts, url: "/reports/accounts" },
+      { title: localizations.activity, url: "/reports/activity" },
+      { title: localizations.campaigns, url: "/reports/campaigns" },
+      { title: localizations.users, url: "/reports/users" },
     ],
   }
 }

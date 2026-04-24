@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import { useTranslations } from "next-intl";
 import { Inbox, PenBox, Search, Send } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 
@@ -44,6 +45,7 @@ export function MailComponent({
   defaultCollapsed = false,
   navCollapsedSize,
 }: MailProps) {
+  const t = useTranslations("EmailsPage");
   const [isCollapsed, setIsCollapsed] = React.useState(defaultCollapsed);
   const [mail] = useMail();
   const searchParams = useSearchParams();
@@ -110,7 +112,7 @@ export function MailComponent({
               isCollapsed={isCollapsed}
               links={[
                 {
-                  title: "Compose",
+                  title: t("compose"),
                   icon: PenBox,
                   variant: "ghost",
                   href: "#",
@@ -122,13 +124,13 @@ export function MailComponent({
             isCollapsed={isCollapsed}
             links={[
               {
-                title: "Inbox",
+                title: t("inbox"),
                 icon: Inbox,
                 variant: activeFolder === "INBOX" ? "default" : "ghost",
                 href: folderHref("INBOX"),
               },
               {
-                title: "Sent",
+                title: t("sent"),
                 icon: Send,
                 variant: activeFolder === "SENT" ? "default" : "ghost",
                 href: folderHref("SENT"),
@@ -141,20 +143,20 @@ export function MailComponent({
           <Tabs defaultValue="all">
             <div className="flex items-center px-4 py-2">
               <h1 className="text-xl font-bold">
-                {activeFolder === "SENT" ? "Sent" : "Inbox"}
+                {activeFolder === "SENT" ? t("sent") : t("inbox")}
               </h1>
               <TabsList className="ml-auto">
                 <TabsTrigger
                   value="all"
                   className="text-zinc-600 dark:text-zinc-200"
                 >
-                  All mail
+                  {t("allMail")}
                 </TabsTrigger>
                 <TabsTrigger
                   value="unread"
                   className="text-zinc-600 dark:text-zinc-200"
                 >
-                  Unread
+                  {t("unread")}
                 </TabsTrigger>
               </TabsList>
             </div>
@@ -163,7 +165,7 @@ export function MailComponent({
               <form>
                 <div className="relative">
                   <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <Input placeholder="Search" className="pl-8" />
+                  <Input placeholder={t("search")} className="pl-8" />
                 </div>
               </form>
             </div>

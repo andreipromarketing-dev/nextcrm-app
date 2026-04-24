@@ -5,6 +5,8 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import moment from "moment";
+import { useTranslations } from "next-intl";
+
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -19,50 +21,6 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
-import { Cross2Icon, DotsHorizontalIcon } from "@radix-ui/react-icons";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  DoubleArrowLeftIcon,
-  DoubleArrowRightIcon,
-} from "@radix-ui/react-icons";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import AlertModal from "@/components/modals/alert-modal";
-import { toast } from "sonner";
-import { deleteCampaign } from "@/actions/campaigns/delete-campaign";
 
 type Campaign = {
   id: string;
@@ -100,13 +58,14 @@ function CampaignRowActions({ row }: { row: { original: Campaign } }) {
   const campaign = row.original;
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const t = useTranslations("CampaignsView");
 
   const onDelete = async () => {
     setLoading(true);
     await deleteCampaign(campaign.id);
     setLoading(false);
     setOpen(false);
-    toast.success("Campaign has been deleted");
+    toast.success(t("campaignDeleted"));
     router.refresh();
   };
 
@@ -125,18 +84,18 @@ function CampaignRowActions({ row }: { row: { original: Campaign } }) {
             className="flex h-8 w-8 p-0 data-[state=open]:bg-muted"
           >
             <DotsHorizontalIcon className="h-4 w-4" />
-            <span className="sr-only">Open menu</span>
+            <span className="sr-only">{t("view")}</span>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-[160px]">
           <DropdownMenuItem
             onClick={() => router.push(`/campaigns/${campaign.id}`)}
           >
-            View
+            {t("view")}
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem onClick={() => setOpen(true)}>
-            Delete
+            {t("delete")}
             <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
           </DropdownMenuItem>
         </DropdownMenuContent>
@@ -145,77 +104,8 @@ function CampaignRowActions({ row }: { row: { original: Campaign } }) {
   );
 }
 
-const columns: ColumnDef<Campaign>[] = [
-  {
-    accessorKey: "name",
-    header: "Name",
-    cell: ({ row }) => (
-      <Link
-        href={`/campaigns/${row.original.id}`}
-        className="font-medium hover:underline"
-      >
-        {row.getValue("name")}
-      </Link>
-    ),
-    enableSorting: true,
-    enableHiding: true,
-  },
-  {
-    accessorKey: "status",
-    header: "Status",
-    cell: ({ row }) => {
-      const status = row.getValue("status") as string | null;
-      return status ? (
-        <Badge className={statusBadgeClass(status)} variant="secondary">
-          {status}
-        </Badge>
-      ) : (
-        <span className="text-muted-foreground">—</span>
-      );
-    },
-    enableSorting: true,
-    enableHiding: true,
-  },
-  {
-    accessorKey: "scheduled_at",
-    header: "Scheduled At",
-    cell: ({ row }) => (
-      <div className="w-[100px]">
-        {row.getValue("scheduled_at")
-          ? moment(row.getValue("scheduled_at")).format("YY-MM-DD HH:mm")
-          : "—"}
-      </div>
-    ),
-    enableSorting: true,
-    enableHiding: true,
-  },
-  {
-    id: "recipients",
-    header: "Recipients",
-    cell: ({ row }) => (
-      <div className="text-right tabular-nums">
-        {row.original._count?.sends ?? 0}
-      </div>
-    ),
-    enableSorting: false,
-    enableHiding: true,
-  },
-  {
-    id: "template_name",
-    header: "Template",
-    cell: ({ row }) => (
-      <div>{row.original.template?.name ?? "—"}</div>
-    ),
-    enableSorting: false,
-    enableHiding: true,
-  },
-  {
-    id: "actions",
-    cell: ({ row }) => <CampaignRowActions row={row} />,
-  },
-];
-
 const CampaignsView = ({ data }: { data: Campaign[] }) => {
+  const t = useTranslations("CampaignsView");
   const [rowSelection, setRowSelection] = React.useState({});
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
@@ -224,6 +114,82 @@ const CampaignsView = ({ data }: { data: Campaign[] }) => {
   );
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [selectedStatus, setSelectedStatus] = React.useState<string>("All");
+
+  const columns: ColumnDef<Campaign>[] = [
+    {
+      accessorKey: "name",
+      header: t("name"),
+      cell: ({ row }) => (
+        <Link
+          href={`/campaigns/${row.original.id}`}
+          className="font-medium hover:underline"
+        >
+          {row.getValue("name")}
+        </Link>
+      ),
+      enableSorting: true,
+      enableHiding: true,
+    },
+    {
+      accessorKey: "status",
+      header: t("status"),
+      cell: ({ row }) => {
+        const status = row.getValue("status") as string | null;
+        return status ? (
+          <Badge className={statusBadgeClass(status)} variant="secondary">
+            {status}
+          </Badge>
+        ) : (
+          <span className="text-muted-foreground">—</span>
+        );
+      },
+      enableSorting: true,
+      enableHiding: true,
+    },
+    {
+      accessorKey: "scheduled_at",
+      header: t("scheduledAt"),
+      cell: ({ row }) => (
+        <div className="w-[100px]">
+          {row.getValue("scheduled_at")
+            ? moment(row.getValue("scheduled_at")).format("YY-MM-DD HH:mm")
+            : "—"}
+        </div>
+      ),
+      enableSorting: true,
+      enableHiding: true,
+    },
+    {
+      id: "recipients",
+      header: t("recipients"),
+      cell: ({ row }) => (
+        <div className="text-right tabular-nums">
+          {row.original._count?.sends ?? 0}
+        </div>
+      ),
+      enableSorting: false,
+      enableHiding: true,
+    },
+    {
+      id: "template_name",
+      header: t("template"),
+      cell: ({ row }) => (
+        <div>{row.original.template?.name ?? "—"}</div>
+      ),
+      enableSorting: false,
+      enableHiding: true,
+    },
+    {
+      id: "actions",
+      header: t("actions"),
+      cell: ({ row }) => <CampaignRowActions row={row} />,
+    },
+  ];
+
+  const filteredData = React.useMemo(() => {
+    if (selectedStatus === "All") return data;
+    return data.filter((c) => c.status === selectedStatus);
+  }, [data, selectedStatus]);
 
   const filteredData = React.useMemo(() => {
     if (selectedStatus === "All") return data;
@@ -257,15 +223,15 @@ const CampaignsView = ({ data }: { data: Campaign[] }) => {
 
   return (
     <Card>
-      <CardHeader className="pb-3">
-        <div className="flex justify-between">
-          <div>
-            <CardTitle>All Campaigns</CardTitle>
-            <CardDescription></CardDescription>
-          </div>
-        </div>
-        <Separator />
-      </CardHeader>
+       <CardHeader className="pb-3">
+         <div className="flex justify-between">
+           <div>
+             <CardTitle>{t("allCampaigns")}</CardTitle>
+             <CardDescription></CardDescription>
+           </div>
+         </div>
+         <Separator />
+       </CardHeader>
 
       <CardContent>
         <div className="space-y-4">
