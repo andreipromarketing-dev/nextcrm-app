@@ -54,6 +54,20 @@
   "CrmModuleMenuComponent": {
     "menuTitle": "Продажи"
   },
+  "LanguageSelector": {
+    "english": "Английский",
+    "czech": "Чешский",
+    "german": "Немецкий",
+    "ukrainian": "Украинский",
+    "russian": "Русский",
+    "selectPlaceholder": "Выберите язык...",
+    "searchPlaceholder": "Поиск языка...",
+    "noResult": "Язык не найден.",
+    "loadingModal": "Изменяю язык...",
+    "success": "Язык изменён",
+    "changedTo": "Язык изменён на {language}",
+    "error": "Ошибка изменения языка"
+  },
   "Common": {
     "success": "Успех",
     "error": "Ошибка",
@@ -71,21 +85,13 @@
     "low": "Низкий",
     "medium": "Средний",
     "high": "Высокий",
-    "critical": "Критический"
-  },
-  "LanguageSelector": {
-    "english": "Английский",
-    "czech": "Чешский",
-    "german": "Немецкий",
-    "ukrainian": "Украинский",
-    "russian": "Русский",
-    "selectPlaceholder": "Выберите язык...",
-    "searchPlaceholder": "Поиск языка...",
-    "noResult": "Язык не найден.",
-    "loadingModal": "Изменяю язык...",
-    "success": "Язык изменён",
-    "changedTo": "Язык изменён на {language}",
-    "error": "Ошибка изменения языка"
+    "critical": "Критический",
+    "toggleSidebar": "Переключить боковую панель",
+    "search": "Поиск",
+    "searchSomething": "Искать что-то...",
+    "feedback": "Отзыв",
+    "toggleTheme": "Переключить тему",
+    "view": "Вид"
   },
   "CrmPage": {
     "title": "CRM",
@@ -582,7 +588,24 @@
     "searchSomething": "Искать что-то...",
     "feedback": "Отзыв",
     "toggleTheme": "Переключить тему",
-    "view": "Вид"
+    "view": "Вид",
+    "success": "Успех",
+    "error": "Ошибка",
+    "cancel": "Отмена",
+    "create": "Создать",
+    "update": "Обновить",
+    "activate": "Активировать",
+    "savingData": "Сохранение данных...",
+    "somethingWentWrong": "Что-то пошло не так. Пожалуйста, попробуйте ещё раз.",
+    "assignedTo": "Назначено",
+    "selectUser": "Выберите пользователя",
+    "description": "Описание",
+    "priorityLabel": "Приоритет",
+    "priorityPlaceholder": "Выберите приоритет",
+    "low": "Низкий",
+    "medium": "Средний",
+    "high": "Высокий",
+    "critical": "Критический"
   },
   "ProjectsPage": {
     "title": "Проекты",
