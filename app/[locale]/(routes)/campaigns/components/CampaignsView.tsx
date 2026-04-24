@@ -189,12 +189,7 @@ const CampaignsView = ({ data }: { data: Campaign[] }) => {
   const filteredData = React.useMemo(() => {
     if (selectedStatus === "All") return data;
     return data.filter((c) => c.status === selectedStatus);
-  }, [data, selectedStatus]);
-
-  const filteredData = React.useMemo(() => {
-    if (selectedStatus === "All") return data;
-    return data.filter((c) => c.status === selectedStatus);
-  }, [data, selectedStatus]);
+}, [data, selectedStatus]);
 
   const table = useReactTable({
     data: filteredData,
